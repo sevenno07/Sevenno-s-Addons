@@ -1,4 +1,4 @@
 Sevenno-s-Addons
 ================
 
-sevenno07
+Author: sevenno07

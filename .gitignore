@@ -1,0 +1,7 @@
+/releases/
+Thumbs.db
+*.DS_Store
+/.gradle/
+/build/
+/bin/
+/eclipse/
