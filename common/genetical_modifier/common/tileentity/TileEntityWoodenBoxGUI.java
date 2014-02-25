@@ -6,17 +6,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.Constants;
 
 public class TileEntityWoodenBoxGUI extends TileEntity implements IInventory
 {
 
 	private ItemStack[] inventory = new ItemStack[1];
 	private String customName;
-
+	
 	public void readFromNBT(NBTTagCompound nbttag)
 	{
 		super.readFromNBT(nbttag);
-		NBTTagList nbttaglist = nbttag.getTagList("Items", 10);
+		NBTTagList nbttaglist = nbttag.getTagList("Items", Constants.NBT.TAG_LIST);
 		this.inventory = new ItemStack[this.getSizeInventory()];
 
 		if (nbttag.hasKey("CustomName"))
@@ -24,10 +25,10 @@ public class TileEntityWoodenBoxGUI extends TileEntity implements IInventory
 			this.customName = nbttag.getString("CustomName");
 		}
 
-		for (int i = 0; i < nbttaglist.tagCount(); i++)
+		for (int i = 0; i < nbttaglist.tagCount(); ++i)
 		{
 			NBTTagCompound nbttagcompound1 = (NBTTagCompound)nbttaglist.getCompoundTagAt(i);
-			int j = nbttagcompound1.getByte("Slot");
+			int j = nbttagcompound1.getByte("Slot") & 255;
 
 			if (j >= 0 && j < this.inventory.length)
 			{
@@ -36,30 +37,29 @@ public class TileEntityWoodenBoxGUI extends TileEntity implements IInventory
 		}
 	}
 
-	public void writeToNBT(NBTTagCompound nbttag)
-	{
-		super.writeToNBT(nbttag);
-		NBTTagList nbttaglist = new NBTTagList();
+    public void writeToNBT(NBTTagCompound nbttag)
+    {
+        super.writeToNBT(nbttag);
+        NBTTagList nbttaglist = new NBTTagList();
 
-		for (int i = 0; i < this.inventory.length; i++)
-		{
-			if (this.inventory[i] != null)
-			{
-				NBTTagCompound nbttagcompound1 = new NBTTagCompound();
-				nbttagcompound1.setByte("Slot", (byte)i);
-				this.inventory[i].writeToNBT(nbttagcompound1);
-				nbttaglist.appendTag(nbttagcompound1);
-			}
-		}
+        for (int i = 0; i < this.inventory.length; ++i)
+        {
+            if (this.inventory[i] != null)
+            {
+                NBTTagCompound nbttagcompound1 = new NBTTagCompound();
+                nbttagcompound1.setByte("Slot", (byte)i);
+                this.inventory[i].writeToNBT(nbttagcompound1);
+                nbttaglist.appendTag(nbttagcompound1);
+            }
+        }
+        nbttag.setTag("Items", nbttaglist);
 
-		nbttag.setTag("Items", nbttaglist);
+        if (this.hasCustomInventoryName())
+        {
+        	nbttag.setString("CustomName", this.customName);
+        }
+    }
 
-		if (this.isInvNameLocalized())
-		{
-			nbttag.setString("CustomName", this.customName);
-		}
-	}
-	
 	@Override
 	public int getSizeInventory()
 	{
@@ -71,12 +71,6 @@ public class TileEntityWoodenBoxGUI extends TileEntity implements IInventory
 	{
 		return inventory[slotId];
 	}
-	
-/*	@Override
-	public ItemStack getStackInSlot(int var1)
-	{
-		return this.inventory[var1];
-	}*/
 
 	@Override
 	public ItemStack decrStackSize(int slotId, int quantity)
@@ -142,12 +136,7 @@ public class TileEntityWoodenBoxGUI extends TileEntity implements IInventory
 	@Override
 	public String getInventoryName()
 	{
-		return this.isInvNameLocalized() ? this.customName : "Wooden Box";
-	}
-
-	public boolean isInvNameLocalized()
-	{
-		return this.customName != null && this.customName.length() > 0;
+		return this.hasCustomInventoryName() ? this.customName : "Wooden Box";
 	}
 
 	@Override
@@ -181,6 +170,6 @@ public class TileEntityWoodenBoxGUI extends TileEntity implements IInventory
 	@Override
 	public boolean hasCustomInventoryName()
 	{
-		return false;
+		return this.customName != null && this.customName.length() > 0;
 	}
 }
