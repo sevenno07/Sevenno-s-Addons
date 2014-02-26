@@ -6,7 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 public class SevennoAddonsCreativeTabs
 {
 	public static CreativeTabs SACreativeTabsBlock;
-//	public static CreativeTabs SACreativeTabsItem;
+	public static CreativeTabs SACreativeTabsItem;
 //	public static CreativeTabs SACreativeTabsArmor;
 //	public static CreativeTabs SACreativeTabsTool;
 //	public static CreativeTabs SACreativeTabsFood;
@@ -16,7 +16,7 @@ public class SevennoAddonsCreativeTabs
 		try
 		{
 			SACreativeTabsBlock = new SACreativeTabsBlock("SACreativeTabsBlock");
-//			SACreativeTabsItem = new SACreativeTabsItem("SACreativeTabsItem");
+			SACreativeTabsItem = new SACreativeTabsItem("SACreativeTabsItem");
 //			SACreativeTabsArmor = new SACreativeTabsArmor("SACreativeTabsArmor");
 //			SACreativeTabsTool = new SACreativeTabsTool("SACreativeTabsTool");
 //			SACreativeTabsFood = new SACreativeTabsFood("SACreativeTabsFood");

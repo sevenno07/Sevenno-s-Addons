@@ -1,29 +1,29 @@
-package sevenno_addons.common.block;
+package sevenno_addons.common.block.itemblock;
 
+import sevenno_addons.common.block.LightQuartzBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemInvertedRedstoneLamp extends ItemBlock
+public class ItemLightQuartzBlock extends ItemBlock
 {
-	public ItemInvertedRedstoneLamp(Block block)
+
+	public ItemLightQuartzBlock(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
 	}
-	
 	public int getMetadata(int metadata)
 	{
 		return metadata;
 	}
-	
 	public String getUnlocalizedName(ItemStack stack)
 	{
 		int metadata = stack.getItemDamage();
-		if(metadata > InvertedRedstoneLamp.type.length || metadata < 0)
+		if(metadata > LightQuartzBlock.type_a.length || metadata < 0)
 		{
 			metadata = 0;
 		}
-		return super.getUnlocalizedName() + "." + InvertedRedstoneLamp.type[metadata];
+		return super.getUnlocalizedName() + "." + LightQuartzBlock.type_a[metadata];
 	}
 }

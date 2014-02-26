@@ -5,9 +5,11 @@ import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
 //import sevenno_addons.common.event.PlayerRenderEvent;
 import sevenno_addons.proxy.SACommonProxy;
 import sevenno_addons.common.gui.GuiHandler;
+import sevenno_addons.common.item.SAItemList;
 import sevenno_addons.common.tileentity.SATEntityList;
 
 import java.util.logging.Logger;
+
 
 //import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
@@ -38,7 +40,7 @@ public class Sevenno_addons
 	{
 		SevennoAddonsCreativeTabs.loadCreativeTab();// CreativeTab
 		SABlockList.loadBlock();// Block
-//		SAItemList.loadItem();// Item
+		SAItemList.loadItem();// Item
 //		SAAchievements.loadAchievements();
 
 		proxy.initSound();// Sound
