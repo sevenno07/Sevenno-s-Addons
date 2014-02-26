@@ -1,4 +1,4 @@
-package genetical_modifier.common.block;
+package sevenno_addons.common.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -9,8 +9,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import genetical_modifier.common.creativetabs.GeneticalModifierCreativeTabs;
-import genetical_modifier.common.tileentity.EntityInvertedRedstoneLamp;
+import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
+import sevenno_addons.common.tileentity.EntityInvertedRedstoneLamp;
 
 public class InvertedRedstoneLamp extends Block
 {
@@ -20,7 +20,7 @@ public class InvertedRedstoneLamp extends Block
 	public InvertedRedstoneLamp() 
 	{
 		super(Material.redstoneLight);
-		this.setCreativeTab(GeneticalModifierCreativeTabs.GMCreativeTabsBlock);
+		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 	}
 	
 	public int getLightValue(IBlockAccess world, int x, int y, int z)
@@ -48,7 +48,7 @@ public class InvertedRedstoneLamp extends Block
 		IconArray = new IIcon[type.length];
 		for(int i = 0; i < type.length; i++)
 		{
-			IconArray[i] = iconregister.registerIcon("genetical_modifier:" + type[i]);
+			IconArray[i] = iconregister.registerIcon("sevenno_addons:" + type[i]);
 		}
 	}
 

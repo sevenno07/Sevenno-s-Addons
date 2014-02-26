@@ -1,6 +1,6 @@
-package genetical_modifier.proxy;
+package sevenno_addons.proxy;
 
-public class GMCommonProxy
+public class SACommonProxy
 {
 	public void registerRender()
 	{

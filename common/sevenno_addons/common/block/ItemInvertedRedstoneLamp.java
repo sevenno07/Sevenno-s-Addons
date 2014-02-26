@@ -1,4 +1,4 @@
-package genetical_modifier.common.block;
+package sevenno_addons.common.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
