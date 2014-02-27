@@ -33,6 +33,14 @@ public class SABlockList
 		SPReedBooster = new SPReedBooster().setStepSound(Block.soundTypeGlass).setHardness(2.0F).setBlockName("SPReedBooster");
 		
 		CoalReedBlock = new CoalReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:coalReedBlock");
+		IronReedBlock = new IronReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:ironReedBlock");
+		GoldReedBlock = new GoldReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:goldReedBlock");
+		DiamondReedBlock = new DiamondReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:diamondReedBlock");
+		EmeraldReedBlock = new EmeraldReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:emeraldReedBlock");
+		RedstoneReedBlock = new RedstoneReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:redstoneReedBlock");
+		LapisReedBlock = new LapisReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:lapisReedBlock");
+		GlowstoneReedBlock = new GlowstoneReedBlock().setStepSound(Block.soundTypeGrass).setLightLevel(1.0F).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:glowstoneReedBlock");
+		QuartzReedBlock = new QuartzReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:quartzReedBlock");
 		
 		
 		
@@ -40,12 +48,20 @@ public class SABlockList
 		try
 		{
 			GameRegistry.registerBlock(WoodenBox, "Wooden_Box");
-			GameRegistry.registerBlock(InvertedRedstoneLamp, ItemInvertedRedstoneLamp.class, "InvertedRedstoneLamp", "Inverted Redstone Lamp");
-			GameRegistry.registerBlock(LightQuartzBlock, ItemLightQuartzBlock.class, "LightQuartzBlock", "Light Quartz Block");
-			GameRegistry.registerBlock(RefinedBedrockBlock, "Refined Bedrock Block");
-			GameRegistry.registerBlock(SPReedBooster, "SP Reed Booster");
+			GameRegistry.registerBlock(InvertedRedstoneLamp, ItemInvertedRedstoneLamp.class, "InvertedRedstoneLamp", "Inverted_Redstone_Lamp");
+			GameRegistry.registerBlock(LightQuartzBlock, ItemLightQuartzBlock.class, "LightQuartzBlock", "Light_Quartz_Block");
+			GameRegistry.registerBlock(RefinedBedrockBlock, "Refined_Bedrock_Block");
+			GameRegistry.registerBlock(SPReedBooster, "SP_Reed_Booster");
 			
-			GameRegistry.registerBlock(CoalReedBlock, "Coal Reed Block");
+			GameRegistry.registerBlock(CoalReedBlock, "Coal_Reed_Block");
+			GameRegistry.registerBlock(IronReedBlock, "Iron_Reed_Block");
+			GameRegistry.registerBlock(GoldReedBlock, "Gold_Reed_Block");
+			GameRegistry.registerBlock(DiamondReedBlock, "Diamond_Reed_Block");
+			GameRegistry.registerBlock(EmeraldReedBlock, "Emerald_Reed_Block");
+			GameRegistry.registerBlock(RedstoneReedBlock, "Redstone_Reed_Block");
+			GameRegistry.registerBlock(LapisReedBlock, "Lapis_Reed_Block");
+			GameRegistry.registerBlock(GlowstoneReedBlock, "Glowstone_Reed_Block");
+			GameRegistry.registerBlock(QuartzReedBlock, "Quartz_Reed_Block");
 			
 		}
 		catch(Exception ex)

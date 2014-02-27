@@ -18,8 +18,8 @@ buildscript {
 apply plugin: 'forge'
 
 version = "1.0.0"
-group= "nether_plus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Nether_Plus"
+group= "genetical_modifier" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Genetical_modifier
 
 minecraft {
     version = "1.7.2-10.12.0.1033"

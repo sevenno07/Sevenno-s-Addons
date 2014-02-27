@@ -15,9 +15,9 @@ import sevenno_addons.common.item.SAItemList;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CoalReedBlock extends Block implements IPlantable
+public class LapisReedBlock extends Block implements IPlantable
 {
-    protected CoalReedBlock()
+    protected LapisReedBlock()
     {
         super(Material.plants);
         float f = 0.375F;
@@ -27,7 +27,7 @@ public class CoalReedBlock extends Block implements IPlantable
 
     public void updateTick(World world, int par2, int par3, int par4, Random random)
     {
-        if (world.getBlock(par2, par3 - 1, par4) == SABlockList.CoalReedBlock || this.checkBlockCoordValid(world, par2, par3, par4))
+        if (world.getBlock(par2, par3 - 1, par4) == SABlockList.LapisReedBlock || this.checkBlockCoordValid(world, par2, par3, par4))
         {
             if (world.isAirBlock(par2, par3 + 1, par4))
             {
@@ -61,7 +61,7 @@ public class CoalReedBlock extends Block implements IPlantable
         Block block = world.getBlock(x, y - 1, z);
     	if (block == this)
     	{
-    		return block == SABlockList.CoalReedBlock;
+    		return block == SABlockList.LapisReedBlock;
     	}
     	return block == SABlockList.SPReedBooster;
     }
@@ -97,7 +97,7 @@ public class CoalReedBlock extends Block implements IPlantable
     
     public Item getItemDropped(int par1, Random random, int par3)
     {
-        return SAItemList.CoalReed;
+        return SAItemList.LapisReed;
     }
 
     public boolean isOpaqueCube()
@@ -118,7 +118,7 @@ public class CoalReedBlock extends Block implements IPlantable
     @SideOnly(Side.CLIENT)
     public Item getItem(World world, int x, int y, int z)
     {
-        return SAItemList.CoalReed;
+        return SAItemList.LapisReed;
     }
     
     @Override

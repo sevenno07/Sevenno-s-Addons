@@ -9,12 +9,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class CoalReed extends Item
+public class QuartzReed extends Item
 {
     private Block field_150935_a;
     private static final String __OBFID = "CL_00001773";
 
-    public CoalReed(Block p_i45329_1_)
+    public QuartzReed(Block p_i45329_1_)
     {
         this.field_150935_a = p_i45329_1_;
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsItem);
