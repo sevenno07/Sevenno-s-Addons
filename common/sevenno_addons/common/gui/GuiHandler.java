@@ -1,6 +1,8 @@
 package sevenno_addons.common.gui;
 
+import sevenno_addons.common.block.container.ContainerGreenMushroomChest;
 import sevenno_addons.common.block.container.ContainerWoodenBoxGUI;
+import sevenno_addons.common.tileentity.TileEntityGreenMushroomChest;
 import sevenno_addons.common.tileentity.TileEntityWoodenBoxGUI;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -17,6 +19,10 @@ public class GuiHandler implements IGuiHandler
 	{
 		return new ContainerWoodenBoxGUI(player.inventory, (TileEntityWoodenBoxGUI) tile_entity);
 	}
+	else if(tile_entity instanceof TileEntityGreenMushroomChest)
+	{
+		return new ContainerGreenMushroomChest(player.inventory, (TileEntityGreenMushroomChest) tile_entity);
+	}
 		return null;
 	}
 
@@ -27,6 +33,10 @@ public class GuiHandler implements IGuiHandler
 	if(tile_entity instanceof TileEntityWoodenBoxGUI)
 	{
 		return new GuiWoodenBoxGUI(player.inventory, (TileEntityWoodenBoxGUI) tile_entity);
+	}
+	else if(tile_entity instanceof TileEntityGreenMushroomChest)
+	{
+		return new GuiGreenMushroomChest(player.inventory, (TileEntityGreenMushroomChest) tile_entity);
 	}
 		return null;
 	}

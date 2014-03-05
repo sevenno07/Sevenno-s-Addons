@@ -17,6 +17,8 @@ public class SAItemList
 	public static Item LapisReed;
 	public static Item GlowstoneReed;
 	public static Item QuartzReed;
+	
+	public static Item RedstoneWire;
 
 	public static void loadItem()
 	{
@@ -32,6 +34,9 @@ public class SAItemList
 			GlowstoneReed = new GlowstoneReed(SABlockList.GlowstoneReedBlock).setUnlocalizedName("GlowstoneReed").setTextureName("sevenno_addons:glowstoneReed");
 			QuartzReed = new QuartzReed(SABlockList.QuartzReedBlock).setUnlocalizedName("QuartzReed").setTextureName("sevenno_addons:quartzReed");
 			
+			RedstoneWire = new RedstoneWire(SABlockList.RedstoneWire).setUnlocalizedName("RedstoneWire").setTextureName("sevenno_addons:redstoneWire");
+			
+			
 			//register
 			GameRegistry.registerItem(CoalReed, "Coal_Reed");
 			GameRegistry.registerItem(IronReed, "Iron_Reed");
@@ -42,6 +47,8 @@ public class SAItemList
 			GameRegistry.registerItem(LapisReed, "Lapis_Reed");
 			GameRegistry.registerItem(GlowstoneReed, "Glowstone_Reed");
 			GameRegistry.registerItem(QuartzReed, "Quartz_Reed");
+			
+			GameRegistry.registerItem(RedstoneWire, "ItemRedstone_Wire");
 
 		}catch(Exception ex)
 		{

@@ -11,6 +11,7 @@ public class SATEntityList
 		{
 			GameRegistry.registerTileEntity(EntityInvertedRedstoneLamp.class, "EntityInvertedRedstoneLamp");
 			GameRegistry.registerTileEntity(TileEntityWoodenBoxGUI.class, "TileEntityWoodenBoxGUI");
+			GameRegistry.registerTileEntity(TileEntityGreenMushroomChest.class, "TileEntityGreenMushroomChest");
 		}
 		catch(Exception ex)
 		{
