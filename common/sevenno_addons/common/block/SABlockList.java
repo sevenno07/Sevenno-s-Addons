@@ -5,6 +5,8 @@ import sevenno_addons.common.block.itemblock.ItemInvertedRedstoneLamp;
 import sevenno_addons.common.block.itemblock.ItemLightQuartzBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class SABlockList
@@ -33,12 +35,27 @@ public class SABlockList
 	public static Block GreenMushroomBlock;
 	public static Block YellowMushroomBlock_P;
 	public static Block YellowMushroomBlock;
+	public static Block PurpleMushroomBlock_P;
+	public static Block PurpleMushroomBlock1;
+	public static Block PurpleMushroomBlock2;
+	
+	public static Fluid PurpleDigestiveEnzymes;
+	public static Block blockPurpleDigestiveEnzymes;
 	
 	public static Block GreenMushroomChest;
 	
 	
 	public static void loadBlock()
 	{
+		//liquides
+		PurpleDigestiveEnzymes = new Fluid("PurpleDigestiveEnzymes").setDensity(4000).setViscosity(1000).setTemperature(288).setLuminosity(0).setUnlocalizedName("PurpleDigestiveEnzymes");
+		FluidRegistry.registerFluid(PurpleDigestiveEnzymes);
+		
+		blockPurpleDigestiveEnzymes = new PurpleDigestiveEnzymes(PurpleDigestiveEnzymes, Material.water).setBlockName("PurpleDigestiveEnzymesStill");
+		GameRegistry.registerBlock(blockPurpleDigestiveEnzymes, "Acid");
+		PurpleDigestiveEnzymes.setBlock(blockPurpleDigestiveEnzymes);
+		
+		//blocks
 		InvertedRedstoneLamp = new InvertedRedstoneLamp().setStepSound(Block.soundTypeGlass).setHardness(0.3F).setBlockName("InvertedRedstoneLamp");
 		WoodenBox = new WoodenBox().setStepSound(Block.soundTypeWood).setHardness(0.5F).setBlockName("WoodenBox").setBlockTextureName("sevenno_addons:woodenBox");
 		LightQuartzBlock = new LightQuartzBlock().setStepSound(Block.soundTypeStone).setLightLevel(1.0F).setHardness(0.5F).setBlockName("LightQuartzBlock").setBlockTextureName("sevenno_addons:lightquartzblock");
@@ -60,9 +77,12 @@ public class SABlockList
 		EnderBlock = new EnderBlock(Material.ice, false).setStepSound(Block.soundTypeGlass).setHardness(2.0F).setBlockName("EnderBlock");
 		
 		GreenMushroomBlock_P = new GreenMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("GreenMushroomBlock_P");
-		GreenMushroomBlock = new GreenMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(1.0F).setBlockName("GreenMushroomBlock");
+		GreenMushroomBlock = new GreenMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("GreenMushroomBlock");
 		YellowMushroomBlock_P = new YellowMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("YellowMushroomBlock_P");
-		YellowMushroomBlock = new YellowMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(1.0F).setBlockName("YellowMushroomBlock");
+		YellowMushroomBlock = new YellowMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("YellowMushroomBlock");
+		PurpleMushroomBlock_P = new PurpleMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock_P");
+		PurpleMushroomBlock1 = new PurpleMushroomBlock1().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock1");
+		PurpleMushroomBlock2 = new PurpleMushroomBlock2().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock2");
 		
 		GreenMushroomChest = new GreenMushroomChest().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("GreenMushroomChest");
 		
@@ -89,10 +109,13 @@ public class SABlockList
 			
 			GameRegistry.registerBlock(EnderBlock, "Ender_Block");
 			
-			GameRegistry.registerBlock(GreenMushroomBlock_P, "Green Mushroom");
-			GameRegistry.registerBlock(GreenMushroomBlock, "Green Mushroom Block");
-			GameRegistry.registerBlock(YellowMushroomBlock_P, "Yellow Mushroom");
-			GameRegistry.registerBlock(YellowMushroomBlock, "Yellow Mushroom Block");
+			GameRegistry.registerBlock(GreenMushroomBlock_P, "Green_Mushroom");
+			GameRegistry.registerBlock(GreenMushroomBlock, "Green_Mushroom_Block");
+			GameRegistry.registerBlock(YellowMushroomBlock_P, "Yellow_Mushroom");
+			GameRegistry.registerBlock(YellowMushroomBlock, "Yellow_Mushroom_Block");
+			GameRegistry.registerBlock(PurpleMushroomBlock_P, "Purple_Mushroom");
+			GameRegistry.registerBlock(PurpleMushroomBlock1, "Purple_Mushroom_Block_1");
+			GameRegistry.registerBlock(PurpleMushroomBlock2, "Purple_Mushroom_Block_2");
 			
 			GameRegistry.registerBlock(GreenMushroomChest, "Green Mushroom Chest");
 			

@@ -91,18 +91,6 @@ public class GreenMushroomBlock extends Block
 	    public void getSubBlocks(Item item, CreativeTabs creativetab, List list)
 	    {
 	    	list.add(new ItemStack(item, 1, 0));
-	    	list.add(new ItemStack(item, 1, 1));
-	    	list.add(new ItemStack(item, 1, 2));
-	    	list.add(new ItemStack(item, 1, 3));
-	    	list.add(new ItemStack(item, 1, 4));
-	    	list.add(new ItemStack(item, 1, 5));
-	    	list.add(new ItemStack(item, 1, 6));
-	    	list.add(new ItemStack(item, 1, 7));
-	    	list.add(new ItemStack(item, 1, 8));
-	    	list.add(new ItemStack(item, 1, 9));
-	    	list.add(new ItemStack(item, 1, 10));
-	    	list.add(new ItemStack(item, 1, 11));
-	    	list.add(new ItemStack(item, 1, 12));
 	    }
 	     
 		public Item getItemDropped(int par1, Random par2Random, int par3)

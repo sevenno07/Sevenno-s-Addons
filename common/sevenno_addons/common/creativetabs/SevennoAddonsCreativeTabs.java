@@ -7,8 +7,8 @@ public class SevennoAddonsCreativeTabs
 {
 	public static CreativeTabs SACreativeTabsBlock;
 	public static CreativeTabs SACreativeTabsItem;
-//	public static CreativeTabs SACreativeTabsArmor;
-//	public static CreativeTabs SACreativeTabsTool;
+	public static CreativeTabs SACreativeTabsArmor;
+	public static CreativeTabs SACreativeTabsTool;
 //	public static CreativeTabs SACreativeTabsFood;
 	
 	public static void loadCreativeTab()
@@ -17,8 +17,8 @@ public class SevennoAddonsCreativeTabs
 		{
 			SACreativeTabsBlock = new SACreativeTabsBlock("SACreativeTabsBlock");
 			SACreativeTabsItem = new SACreativeTabsItem("SACreativeTabsItem");
-//			SACreativeTabsArmor = new SACreativeTabsArmor("SACreativeTabsArmor");
-//			SACreativeTabsTool = new SACreativeTabsTool("SACreativeTabsTool");
+			SACreativeTabsArmor = new SACreativeTabsArmor("SACreativeTabsArmor");
+			SACreativeTabsTool = new SACreativeTabsTool("SACreativeTabsTool");
 //			SACreativeTabsFood = new SACreativeTabsFood("SACreativeTabsFood");
 		}
 		catch(Exception ex)
