@@ -29,8 +29,8 @@ public class SAItemList
 	public static Item RedstoneWire;
 	
 	//outils
-	public static ToolMaterial SuperM = EnumHelper.addToolMaterial("SuperM", 3, 10000, 14.0F, 6, 30);
-	public static ToolMaterial BedrockTools = EnumHelper.addToolMaterial("BedrockTools", 3, 1999999999, 16.0F, 9, 30);
+	public static ToolMaterial SuperM = EnumHelper.addToolMaterial("SuperM", 3, 10000, 14.0F, 4, 30);
+	public static ToolMaterial BedrockTools = EnumHelper.addToolMaterial("BedrockTools", 3, 1999999999, 16.0F, 7, 30);
 	
 	public static Item SuperPickaxe;
 	public static Item BedrockPickaxe;
@@ -39,7 +39,7 @@ public class SAItemList
 	public static Item BedrockSword;
 	
 	//armors
-	public static ArmorMaterial RDArmor = EnumHelper.addArmorMaterial("ReinforcedDiamondArmor", 50, new int[]{5, 8, 7, 5}, 30);
+	public static ArmorMaterial RDArmor = EnumHelper.addArmorMaterial("ReinforcedDiamondArmor", 25, new int[]{4, 7, 6, 4}, 21);
 	
 	public static Item RDHelmet;
 	public static Item RDChestplate;

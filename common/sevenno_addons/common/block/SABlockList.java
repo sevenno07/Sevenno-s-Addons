@@ -33,16 +33,24 @@ public class SABlockList
 	
 	public static Block GreenMushroomBlock_P;
 	public static Block GreenMushroomBlock;
+	public static Block GreenMushroomBlock_N;
 	public static Block YellowMushroomBlock_P;
 	public static Block YellowMushroomBlock;
+	public static Block YellowMushroomBlock_N;
 	public static Block PurpleMushroomBlock_P;
 	public static Block PurpleMushroomBlock1;
 	public static Block PurpleMushroomBlock2;
+	public static Block PurpleMushroomBlock_N;
 	
 	public static Fluid PurpleDigestiveEnzymes;
 	public static Block blockPurpleDigestiveEnzymes;
 	
 	public static Block GreenMushroomChest;
+	
+	public static Block StrangeTree;
+	public static Block StrangeTreeLog;
+	public static Block StrangeTreeLog_N;
+	public static Block StrangeTreeLeaves;
 	
 	
 	public static void loadBlock()
@@ -78,13 +86,21 @@ public class SABlockList
 		
 		GreenMushroomBlock_P = new GreenMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("GreenMushroomBlock_P");
 		GreenMushroomBlock = new GreenMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("GreenMushroomBlock");
+		GreenMushroomBlock_N = new GreenMushroomBlock_N().setStepSound(Block.soundTypeWood).setHardness(2.0F).setBlockName("GreenMushroomBlock_N");
 		YellowMushroomBlock_P = new YellowMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("YellowMushroomBlock_P");
 		YellowMushroomBlock = new YellowMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("YellowMushroomBlock");
+		YellowMushroomBlock_N = new YellowMushroomBlock_N().setStepSound(Block.soundTypeWood).setHardness(2.0F).setBlockName("YellowMushroomBlock_N");
 		PurpleMushroomBlock_P = new PurpleMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock_P");
 		PurpleMushroomBlock1 = new PurpleMushroomBlock1().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock1");
 		PurpleMushroomBlock2 = new PurpleMushroomBlock2().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock2");
+		PurpleMushroomBlock_N = new PurpleMushroomBlock_N().setStepSound(Block.soundTypeWood).setHardness(2.0F).setBlockName("PurpleMushroomBlock_N");
 		
 		GreenMushroomChest = new GreenMushroomChest().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("GreenMushroomChest");
+		
+		StrangeTree = new StrangeTree().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setBlockName("StrangeTree");
+		StrangeTreeLog = new StrangeTreeLog().setStepSound(Block.soundTypeWood).setHardness(3.0F).setBlockName("StrangeTreeLog");
+		StrangeTreeLog_N = new StrangeTreeLog_N().setStepSound(Block.soundTypeWood).setHardness(3.0F).setBlockName("StrangeTreeLog_N");
+		StrangeTreeLeaves = new StrangeTreeLeaves().setStepSound(Block.soundTypeGrass).setHardness(0.2F).setBlockName("StrangeTreeLeaves");
 		
 		
 		try
@@ -111,13 +127,21 @@ public class SABlockList
 			
 			GameRegistry.registerBlock(GreenMushroomBlock_P, "Green_Mushroom");
 			GameRegistry.registerBlock(GreenMushroomBlock, "Green_Mushroom_Block");
+			GameRegistry.registerBlock(GreenMushroomBlock_N, "Green_Mushroom_BlockN");
 			GameRegistry.registerBlock(YellowMushroomBlock_P, "Yellow_Mushroom");
 			GameRegistry.registerBlock(YellowMushroomBlock, "Yellow_Mushroom_Block");
+			GameRegistry.registerBlock(YellowMushroomBlock_N, "Yellow_Mushroom_BlockN");
 			GameRegistry.registerBlock(PurpleMushroomBlock_P, "Purple_Mushroom");
 			GameRegistry.registerBlock(PurpleMushroomBlock1, "Purple_Mushroom_Block_1");
 			GameRegistry.registerBlock(PurpleMushroomBlock2, "Purple_Mushroom_Block_2");
+			GameRegistry.registerBlock(PurpleMushroomBlock_N, "Purple_Mushroom_BlockN");
 			
-			GameRegistry.registerBlock(GreenMushroomChest, "Green Mushroom Chest");
+			GameRegistry.registerBlock(GreenMushroomChest, "Green_Mushroom_Chest");
+			
+			GameRegistry.registerBlock(StrangeTree, "Strange_Tree");
+			GameRegistry.registerBlock(StrangeTreeLog, "Strange_Tree_Log");
+			GameRegistry.registerBlock(StrangeTreeLog_N, "Strange_Tree_LogN");
+			GameRegistry.registerBlock(StrangeTreeLeaves, "Strange_Tree_Leaves");
 			
 		}
 		catch(Exception ex)

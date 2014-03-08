@@ -68,7 +68,7 @@ public class Sevenno_addons
 	@EventHandler
 	public void modloaded(FMLPostInitializationEvent event)
 	{
-//		SARecipe.loadRecipe();// Recipe
-//		SARecipe.loadSmelting();// Smelting
+		SARecipe.loadRecipe();// Recipe
+		SARecipe.loadSmelting();// Smelting
 	}
 }

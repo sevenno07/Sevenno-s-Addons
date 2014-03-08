@@ -1,5 +1,9 @@
 package sevenno_addons.common.block;
 
+import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -16,14 +20,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class GreenMushroomBlock extends Block
+public class GreenMushroomBlock_N extends Block
 {
 	
     @SideOnly(Side.CLIENT)
     private IIcon GMside;
     private IIcon GMbody;
 	
-	public GreenMushroomBlock()
+	public GreenMushroomBlock_N()
 	{
 		super(Material.wood);
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
@@ -95,18 +99,18 @@ public class GreenMushroomBlock extends Block
 	     
 		public Item getItemDropped(int par1, Random par2Random, int par3)
 	    {
-			return Item.getItemFromBlock(SABlockList.GreenMushroomBlock);
+			return Item.getItemFromBlock(SABlockList.GreenMushroomBlock_N);
 	    }    
 
 	    public Item itemPicked(World par1World, int par2, int par3, int par4)
 	    {
-	        return Item.getItemFromBlock(SABlockList.GreenMushroomBlock);
+	        return Item.getItemFromBlock(SABlockList.GreenMushroomBlock_N);
 	    }
 	
 	@SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister)
 	{
-		this.blockIcon = iconRegister.registerIcon("sevenno_addons:greenMushroomBlock");
+		this.blockIcon = iconRegister.registerIcon("sevenno_addons:greenMushroomBlock_N");
 		this.GMside = iconRegister.registerIcon("sevenno_addons:greenMushroomBlock_side");
 		this.GMbody = iconRegister.registerIcon("sevenno_addons:greenMushroomBlock_body");
  	}
