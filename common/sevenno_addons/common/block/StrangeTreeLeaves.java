@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
-import sevenno_addons.proxy.GoldParticleFX;
+import sevenno_addons.common.entity.GoldParticleFX;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;

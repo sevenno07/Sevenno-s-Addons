@@ -1,4 +1,4 @@
-package sevenno_addons.proxy;
+package sevenno_addons.common.entity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,7 +13,6 @@ public class GoldParticleFX extends EntityFX
     private double portalPosX;
     private double portalPosY;
     private double portalPosZ;
-    private static final String __OBFID = "CL_00000921";
 
     public GoldParticleFX(World par1World, double par2, double par4, double par6, double par8, double par10, double par12)
     {
@@ -25,12 +24,12 @@ public class GoldParticleFX extends EntityFX
         this.portalPosY = this.posY = par4;
         this.portalPosZ = this.posZ = par6;
         float f = this.rand.nextFloat() * 0.6F + 0.4F;
-        this.portalParticleScale = this.particleScale = this.rand.nextFloat() * 0.2F + 0.5F;
-        this.particleRed = 0.9F;
-        this.particleGreen = 0.8F;
+        this.portalParticleScale = this.particleScale = this.rand.nextFloat() * 0.2F + 0.8F;
+        this.particleRed = 1.0F;
+        this.particleGreen = 0.7F;
         this.particleBlue = 0.0F;
         this.particleMaxAge = (int)(Math.random() * 10.0D) + 40;
-        this.noClip = true;
+        this.noClip = false;
         this.setParticleTextureIndex((int)(Math.random() * 8.0D));
     }
 

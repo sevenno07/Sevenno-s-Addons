@@ -28,6 +28,8 @@ public class SAItemList
 	
 	public static Item RedstoneWire;
 	
+	public static Item StrangeSubstance;
+	
 	//outils
 	public static ToolMaterial SuperM = EnumHelper.addToolMaterial("SuperM", 3, 10000, 14.0F, 4, 30);
 	public static ToolMaterial BedrockTools = EnumHelper.addToolMaterial("BedrockTools", 3, 1999999999, 16.0F, 7, 30);
@@ -68,6 +70,8 @@ public class SAItemList
 			
 			RedstoneWire = new RedstoneWire(SABlockList.RedstoneWire).setUnlocalizedName("RedstoneWire").setTextureName("sevenno_addons:redstoneWire");
 			
+			StrangeSubstance = new StrangeSubstance().setUnlocalizedName("StrangeSubstance");
+			
 			//tools
 			SuperPickaxe = new SuperPickaxe(SuperM).setUnlocalizedName("Superpickaxe");
 			BedrockPickaxe = new BedrockPickaxe(BedrockTools).setUnlocalizedName("BedrockPickaxe");
@@ -99,6 +103,8 @@ public class SAItemList
 			GameRegistry.registerItem(ReinforcementGem, "Reinforcement_Gem");
 			
 			GameRegistry.registerItem(RedstoneWire, "ItemRedstone_Wire");
+			
+			GameRegistry.registerItem(StrangeSubstance, "Strange_Substance");
 			
 			//tools
 			GameRegistry.registerItem(SuperPickaxe, "Strong_Pickaxe");

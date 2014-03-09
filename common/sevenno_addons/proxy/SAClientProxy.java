@@ -7,6 +7,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import sevenno_addons.common.block.render.RedstoneWireBlockRender;
 import sevenno_addons.common.block.render.RenderEnderBlock;
+import sevenno_addons.common.entity.GoldParticleFX;
 import sevenno_addons.common.tileentity.TileEntityGreenMushroomChest;
 import sevenno_addons.common.tileentity.TileEntityGreenMushroomChestRenderer;
 import cpw.mods.fml.client.FMLClientHandler;
@@ -56,5 +57,5 @@ public class SAClientProxy extends SACommonProxy
 
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(textures);
 		}
-	}	
+	}
 }

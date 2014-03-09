@@ -2,15 +2,21 @@ package sevenno_addons.common;
 
 import sevenno_addons.common.block.SABlockList;
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
+import sevenno_addons.common.event.BottleEvent;
 //import sevenno_addons.common.event.PlayerRenderEvent;
 import sevenno_addons.proxy.SACommonProxy;
 import sevenno_addons.common.gui.GuiHandler;
 import sevenno_addons.common.item.SAItemList;
+import sevenno_addons.common.recipe.SARecipe;
 import sevenno_addons.common.tileentity.SATEntityList;
 
 import java.util.logging.Logger;
 
 
+
+
+
+import net.minecraftforge.common.MinecraftForge;
 //import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -58,7 +64,8 @@ public class Sevenno_addons
 
 		proxy.registerRender();
 		proxy.registerRenderEntity();
-
+		
+		MinecraftForge.EVENT_BUS.register(new BottleEvent());
 		// *1
 
 		SATEntityList.loadTileEntity();

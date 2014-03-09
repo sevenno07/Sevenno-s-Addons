@@ -1,4 +1,4 @@
-package sevenno_addons.common;
+package sevenno_addons.common.recipe;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -13,6 +13,7 @@ public class SARecipe
 	public static void loadRecipe()
 	{
 		//block
+		GameRegistry.addRecipe(new ItemStack(SABlockList.GreenMushroomBlock_P, 1), new Object[]{"UXU", "VYV", "WZW", 'U', Items.sugar, 'V', SAItemList.StrangeSubstance, 'W', Items.emerald, 'Y', Blocks.red_mushroom, 'X', Blocks.brown_mushroom, 'Z', Blocks.glowstone});
 		
 		//items
 		GameRegistry.addRecipe(new ItemStack(SAItemList.CoalReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.coal});
