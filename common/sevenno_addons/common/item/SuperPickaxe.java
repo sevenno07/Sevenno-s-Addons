@@ -44,6 +44,6 @@ public class SuperPickaxe extends ItemPickaxe
   	@SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister iconregister)
 	{
-        this.itemIcon = iconregister.registerIcon("sevenno_addons:Superpickaxe");
+        this.itemIcon = iconregister.registerIcon("sevenno_addons:superpickaxe");
  	}
 }

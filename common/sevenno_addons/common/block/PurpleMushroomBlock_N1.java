@@ -20,14 +20,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class YellowMushroomBlock_N extends Block
+public class PurpleMushroomBlock_N1 extends Block
 {
 	
     @SideOnly(Side.CLIENT)
-    private IIcon YMside;
-    private IIcon YMbody;
+    private IIcon PMside;
+    private IIcon PMbody;
 	
-	public YellowMushroomBlock_N()
+	public PurpleMushroomBlock_N1()
 	{
 		super(Material.wood);
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
@@ -43,51 +43,51 @@ public class YellowMushroomBlock_N extends Block
 			}
 			if(par2 == 1)
 			{
-				return par2 == 1 && (par1 == 1 || par1 == 2) ? this.YMside : this.blockIcon;
+				return par2 == 1 && (par1 == 1 || par1 == 2) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 2)
 			{
-				return par2 == 2 && (par1 == 1 || par1 == 2 || par1 == 4) ? this.YMside : this.blockIcon;
+				return par2 == 2 && (par1 == 1 || par1 == 2 || par1 == 4) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 3)
 			{
-				return par2 == 3 && (par1 == 1 || par1 == 4) ? this.YMside : this.blockIcon;
+				return par2 == 3 && (par1 == 1 || par1 == 4) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 4)
 			{
-				return par2 == 4 && (par1 == 1 || par1 == 4 || par1 == 3) ? this.YMside : this.blockIcon;
+				return par2 == 4 && (par1 == 1 || par1 == 4 || par1 == 3) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 5)
 			{
-				return par2 == 5 && (par1 == 1 || par1 == 3 ) ? this.YMside : this.blockIcon;
+				return par2 == 5 && (par1 == 1 || par1 == 3 ) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 6)
 			{
-				return par2 == 6 && (par1 == 1 || par1 == 3 || par1 == 5) ? this.YMside : this.blockIcon;
+				return par2 == 6 && (par1 == 1 || par1 == 3 || par1 == 5) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 7)
 			{
-				return par2 == 7 && (par1 == 1 || par1 == 5) ? this.YMside : this.blockIcon;
+				return par2 == 7 && (par1 == 1 || par1 == 5) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 8)
 			{
-				return par2 == 8 && (par1 == 1 || par1 == 5 || par1 == 2) ? this.YMside : this.blockIcon;
+				return par2 == 8 && (par1 == 1 || par1 == 5 || par1 == 2) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 9)
 			{
-				return par2 == 9 && (par1 == 1) ? this.YMside : this.blockIcon;
+				return par2 == 9 && (par1 == 1) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 10)
 			{
-				return par2 == 10 && (par1 == 2 || par1 == 3 || par1 == 4 || par1 == 5) ? this.YMbody : this.blockIcon;
+				return par2 == 10 && (par1 == 2 || par1 == 3 || par1 == 4 || par1 == 5) ? this.PMbody : this.blockIcon;
 			}
 			if(par2 == 11)
 			{
-				return par2 == 11 && (par1 == 0 || par1 == 1 || par1 == 2 || par1 == 3 || par1 == 4 || par1 == 5) ? this.YMside : this.blockIcon;
+				return par2 == 11 && (par1 == 0 || par1 == 1 || par1 == 2 || par1 == 3 || par1 == 4 || par1 == 5) ? this.PMside : this.blockIcon;
 			}
 			if(par2 == 12)
 			{
-				return par2 == 12 && (par1 == 0 || par1 == 1 || par1 == 2 || par1 == 3 || par1 == 4 || par1 == 5) ? this.YMbody : this.blockIcon;
+				return par2 == 12 && (par1 == 0 || par1 == 1 || par1 == 2 || par1 == 3 || par1 == 4 || par1 == 5) ? this.PMbody : this.blockIcon;
 			}
 			return blockIcon;
 	    }
@@ -99,20 +99,20 @@ public class YellowMushroomBlock_N extends Block
 	     
 		public Item getItemDropped(int par1, Random par2Random, int par3)
 	    {
-			return Item.getItemFromBlock(SABlockList.YellowMushroomBlock_N);
+			return Item.getItemFromBlock(SABlockList.PurpleMushroomBlock_N1);
 	    }    
 
 	    public Item itemPicked(World par1World, int par2, int par3, int par4)
 	    {
-	        return Item.getItemFromBlock(SABlockList.YellowMushroomBlock_N);
+	        return Item.getItemFromBlock(SABlockList.PurpleMushroomBlock_N1);
 	    }
 	
 	@SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister)
 	{
-		this.blockIcon = iconRegister.registerIcon("sevenno_addons:yellowMushroomBlock_N");
-		this.YMside = iconRegister.registerIcon("sevenno_addons:yellowMushroomBlock_side");
-		this.YMbody = iconRegister.registerIcon("sevenno_addons:yellowMushroomBlock_body");
+		this.blockIcon = iconRegister.registerIcon("sevenno_addons:purpleMushroomBlock_N");
+		this.PMside = iconRegister.registerIcon("sevenno_addons:purpleMushroomBlock_side");
+		this.PMbody = iconRegister.registerIcon("sevenno_addons:purpleMushroomBlock_body");
  	}
 	
 }

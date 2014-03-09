@@ -1,10 +1,14 @@
 package sevenno_addons.common.item;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidRegistry;
 import sevenno_addons.common.Sevenno_addons;
 import sevenno_addons.common.block.SABlockList;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -28,6 +32,7 @@ public class SAItemList
 	
 	public static Item RedstoneWire;
 	
+	public static Item PurpleEnzymesBucket;
 	public static Item StrangeSubstance;
 	
 	//outils
@@ -47,6 +52,9 @@ public class SAItemList
 	public static Item RDChestplate;
 	public static Item RDLeggings;
 	public static Item RDBoots;
+	
+	public static Item Separator;
+	public static Item BlockChanger;
 	
 
 	public static void loadItem()
@@ -70,6 +78,7 @@ public class SAItemList
 			
 			RedstoneWire = new RedstoneWire(SABlockList.RedstoneWire).setUnlocalizedName("RedstoneWire").setTextureName("sevenno_addons:redstoneWire");
 			
+			PurpleEnzymesBucket = new PurpleEnzymesBucket(SABlockList.blockPurpleDigestiveEnzymes).setUnlocalizedName("PurpleEnzymesBucket").setContainerItem(Items.bucket);
 			StrangeSubstance = new StrangeSubstance().setUnlocalizedName("StrangeSubstance");
 			
 			//tools
@@ -78,6 +87,9 @@ public class SAItemList
 			BedrockAxe = new BedrockAxe(BedrockTools).setUnlocalizedName("BedrockAxe");
 			BedrockShovel = new BedrockShovel(BedrockTools).setUnlocalizedName("BedrockShovel");
 			BedrockSword = new BedrockSword(BedrockTools).setUnlocalizedName("BedrockSword");
+			
+			Separator = new Separator().setUnlocalizedName("Separator");
+			BlockChanger = new BlockChanger().setUnlocalizedName("BlockChanger");
 			
 			//armors
 			RDHelmet = new RDArmor(RDArmor, 0, 0).setUnlocalizedName("RDHelmet").setTextureName("sevenno_addons:ReinforcedDiamondHelmet");
@@ -104,6 +116,7 @@ public class SAItemList
 			
 			GameRegistry.registerItem(RedstoneWire, "ItemRedstone_Wire");
 			
+			GameRegistry.registerItem(PurpleEnzymesBucket, "Purple_Enzymes_Bucket");
 			GameRegistry.registerItem(StrangeSubstance, "Strange_Substance");
 			
 			//tools
@@ -113,11 +126,16 @@ public class SAItemList
 			GameRegistry.registerItem(BedrockShovel, "Bedrock_Shovel");
 			GameRegistry.registerItem(BedrockSword, "Bedrock_Sword");
 			
+			GameRegistry.registerItem(Separator, "Separator");
+			GameRegistry.registerItem(BlockChanger, "Block_Changer");
+			
 			//armors
 			GameRegistry.registerItem(RDHelmet, "RD_Helmet");
 			GameRegistry.registerItem(RDChestplate, "RD_Chestplate");
 			GameRegistry.registerItem(RDLeggings, "RD_Leggings");
 			GameRegistry.registerItem(RDBoots, "RD_Boots");
+			
+			FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("purpleEnzymes", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(PurpleEnzymesBucket), FluidContainerRegistry.EMPTY_BUCKET);
 			
 
 		}catch(Exception ex)

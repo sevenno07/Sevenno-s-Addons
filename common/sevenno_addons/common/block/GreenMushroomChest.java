@@ -31,7 +31,7 @@ public class GreenMushroomChest extends BlockContainer
 	protected GreenMushroomChest()
 	{
 		super(Material.wood);
-		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+//		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 		this.setBlockBounds(0.0625F, 0.0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
 	}
 	

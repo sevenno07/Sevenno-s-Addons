@@ -12,7 +12,7 @@ public class BedrockSword extends ItemSword
 	public BedrockSword(ToolMaterial toolmaterial)
 	{
 		super(toolmaterial);
-		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsTool);
+		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsArmor);
 	}
 	
 	public boolean getIsRepairable(ItemStack stack, ItemStack outputstack)

@@ -13,7 +13,10 @@ public class SARecipe
 	public static void loadRecipe()
 	{
 		//block
-		GameRegistry.addRecipe(new ItemStack(SABlockList.GreenMushroomBlock_P, 1), new Object[]{"UXU", "VYV", "WZW", 'U', Items.sugar, 'V', SAItemList.StrangeSubstance, 'W', Items.emerald, 'Y', Blocks.red_mushroom, 'X', Blocks.brown_mushroom, 'Z', Blocks.glowstone});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.GreenMushroomBlock_P, 1), new Object[]{"UXU", "VYV", "WZW", 'U', Items.sugar, 'V', SAItemList.StrangeSubstance, 'W', Items.emerald, 'X', Blocks.brown_mushroom, 'Y', Blocks.red_mushroom, 'Z', Blocks.glowstone});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.YellowMushroomBlock_P, 1), new Object[]{"XXX", " Y ", " X ", 'X', SAItemList.StrangeSubstance, 'Y', SABlockList.GreenMushroomBlock_P});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.PurpleMushroomBlock_P, 1), new Object[]{" X ", "XYX", "X X", 'X', SAItemList.StrangeSubstance, 'Y', SABlockList.GreenMushroomBlock_P});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.SPReedBooster, 1), new Object[]{"UXU", "VYV", "WZW", 'U', Blocks.gold_block, 'V', Blocks.diamond_block, 'W', SAItemList.PurpleEnzymesBucket, 'X', Blocks.soul_sand, 'Y', Blocks.glass, 'Z', SABlockList.GreenMushroomBlock_N});
 		GameRegistry.addRecipe(new ItemStack(SABlockList.InvertedRedstoneLamp, 2), new Object[]{"XXX", "XYX", "XXX", 'X', Items.glowstone_dust, 'Y', Blocks.redstone_torch});
 		GameRegistry.addRecipe(new ItemStack(SABlockList.WoodenBox, 12), new Object[]{"XYX", "Y Y", "XYX", 'X', Items.paper, 'Y', Blocks.planks});
 		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 2, 0), new Object[]{"X", "Y", 'X', Blocks.glowstone, 'Y', new ItemStack(Blocks.quartz_block, 1, 0)});
@@ -23,6 +26,30 @@ public class SARecipe
 		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 1, 1), new Object[]{"Y", 'Y', new ItemStack(SABlockList.LightQuartzBlock, 1, 0)});
 		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 1, 2), new Object[]{"Y", 'Y', new ItemStack(SABlockList.LightQuartzBlock, 1, 1)});
 		GameRegistry.addRecipe(new ItemStack(SABlockList.RefinedBedrockBlock, 1), new Object[]{"YYY", "YYY", "YYY", 'Y', SAItemList.BedrockIngot});
+		
+		GameRegistry.addRecipe(new ItemStack(Blocks.planks, 3, 0), new Object[]{"X", "Y", 'X', SABlockList.StrangePlank, 'Y', new ItemStack(Blocks.planks, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.planks, 3, 1), new Object[]{"X", "Y", 'X', SABlockList.StrangePlank, 'Y', new ItemStack(Blocks.planks, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.planks, 3, 2), new Object[]{"X", "Y", 'X', SABlockList.StrangePlank, 'Y', new ItemStack(Blocks.planks, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.planks, 3, 3), new Object[]{"X", "Y", 'X', SABlockList.StrangePlank, 'Y', new ItemStack(Blocks.planks, 1, 3)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.planks, 3, 4), new Object[]{"X", "Y", 'X', SABlockList.StrangePlank, 'Y', new ItemStack(Blocks.planks, 1, 4)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.planks, 3, 5), new Object[]{"X", "Y", 'X', SABlockList.StrangePlank, 'Y', new ItemStack(Blocks.planks, 1, 5)});
+		
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 3, 0), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog_N, 'Y', new ItemStack(Blocks.log, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 3, 1), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog_N, 'Y', new ItemStack(Blocks.log, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 3, 2), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog_N, 'Y', new ItemStack(Blocks.log, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 3, 3), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog_N, 'Y', new ItemStack(Blocks.log, 1, 3)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log2, 3, 0), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog_N, 'Y', new ItemStack(Blocks.log2, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log2, 3, 1), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog_N, 'Y', new ItemStack(Blocks.log2, 1, 1)});
+		
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 5, 0), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 5, 1), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 5, 2), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log, 5, 3), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log, 1, 3)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log2, 5, 0), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log2, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.log2, 5, 1), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log2, 1, 1)});
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(SABlockList.StrangePlank, 4), new Object[]{SABlockList.StrangeTreeLog_N});
+		GameRegistry.addShapelessRecipe(new ItemStack(SABlockList.StrangePlank, 8), new Object[]{SABlockList.StrangeTreeLog});
 		
 		
 		//items
@@ -57,6 +84,9 @@ public class SARecipe
 		GameRegistry.addRecipe(new ItemStack(SAItemList.RDChestplate), new Object[]{"GHG", "GGG", "GGG", 'G', (SAItemList.ReinforcementGem), 'H', Items.diamond_chestplate});
 		GameRegistry.addRecipe(new ItemStack(SAItemList.RDLeggings), new Object[]{"GGG", "GHG", "G G", 'G', (SAItemList.ReinforcementGem), 'H', Items.diamond_leggings});
 		GameRegistry.addRecipe(new ItemStack(SAItemList.RDBoots), new Object[]{"G G", "GHG", 'G', (SAItemList.ReinforcementGem), 'H', Items.diamond_boots});
+		
+		GameRegistry.addRecipe(new ItemStack(SAItemList.Separator, 1), new Object[]{"XVZ", "VYW", "XWU",'U', SAItemList.StrangeSubstance , 'V', Items.blaze_rod, 'W', Items.iron_ingot, 'X', Items.redstone, 'Y', new ItemStack(Items.dye, 1, 4), 'Z', Blocks.gold_block});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.BlockChanger, 1), new Object[]{"VWX", "XYW", "ZWU",'U', SAItemList.StrangeSubstance , 'V', Items.blaze_rod, 'W', Items.iron_ingot, 'X', Items.redstone, 'Y', new ItemStack(Items.dye, 1, 4), 'Z', Blocks.gold_block});
 	}
 	
 	//smelting

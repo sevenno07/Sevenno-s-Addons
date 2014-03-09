@@ -1,0 +1,75 @@
+#Blocks
+tile.InvertedRedstoneLamp.redstone_lamp_off.name=Inverted Redstone Lamp
+tile.WoodenBox.name=Wooden Box
+tile.LightQuartzBlock.default.name=Light Quartz Block
+tile.LightQuartzBlock.chiseled.name=Light Quartz Block Chiseled
+tile.LightQuartzBlock.lines.name=Light Quartz Block Pillar
+tile.RefinedBedrockBlock.name=Refined Bedrock Block
+tile.SPReedBooster.name=Special Reed Booster Block
+tile.GreenMushroomBlock_P.name=Green Mushroom
+tile.GreenMushroomBlock.name=Green Mushroom Block
+tile.GreenMushroomBlock_N.name=Green Mushroom Block
+tile.YellowMushroomBlock_P.name=Yellow Mushroom
+tile.YellowMushroomBlock.name=Yellow Mushroom Block
+tile.YellowMushroomBlock_N.name=Yellow Mushroom Block
+tile.PurpleMushroomBlock_P.name=Purple Mushroom
+tile.PurpleMushroomBlock1.name=Purple Mushroom Block
+tile.PurpleMushroomBlock2.name=Purple Mushroom Block
+tile.PurpleMushroomBlock_N1.name=Purple Mushroom Block
+tile.PurpleMushroomBlock_N2.name=Purple Mushroom Block
+tile.StrangeTree.name=Strange Tree
+tile.StrangeTreeLog.name=Strange Log
+tile.StrangeTreeLog_N.name=Strange Log
+tile.StrangeTreeLeaves.name=Strange Leaves
+tile.StrangePlank.name=Strange Plank
+tile.StrangePlank2.name=Strange Plank
+tile.StrangePlankStairs.name=Strange Stairs
+tile.StrangePlankStairs2.name=Strange Stairs
+tile.StrangePlankFence.name=Strange Fence
+tile.StrangePlankFence2.name=Strange Fence
+tile.StrangePlankWall.name=Strange Wall
+tile.StrangePlankWall2.name=Strange Wall
+tile.StrangePlankSlab.StrangePlank.name=Strange Slab
+tile.StrangePlankDoubleSlab.StrangePlank.name=Strange Slab
+tile.StrangePlankSlab2.StrangePlank2.name=Strange Slab
+tile.StrangePlankDoubleSlab2.StrangePlank2.name=Strange Slab
+//tile.block.name=name
+
+#Items
+item.CoalReed.name=Coal Reed
+item.IronReed.name=Iron Reed
+item.GoldReed.name=Gold Reed
+item.DiamondReed.name=Diamond Reed
+item.EmeraldReed.name=Emerald Reed
+item.RedstoneReed.name=Redstone Reed
+item.LapisReed.name=Lapis Reed
+item.GlowstoneReed.name=Glowstone Reed
+item.QuartzReed.name=Quartz Reed
+item.BedrockPowder.name=Bedrock Powder
+item.BedrockIngot.name=Bedrock Ingot
+item.ReinforcementGem.name=Reinforcement Gem
+item.PurpleEnzymesBucket.name=Purple Enzymes Bucket
+item.StrangeSubstance.name=Strange Substance
+
+item.BedrockSword.name=Bedrock Sword
+item.RDHelmet.name=Reinforced Diamond Helmet
+item.RDChestplate.name=Reinforced Diamond Chestplate
+item.RDLeggings.name=Reinforced Diamond Leggings
+item.RDBoots.name=Reinforced Diamond Boots
+
+item.Superpickaxe.name=Super Pickaxe
+item.BedrockPickaxe.name=Bedrock Pickaxe
+item.BedrockAxe.name=Bedrock Axe
+item.BedrockShovel.name=Bedrock Shovel
+item.Separator.name=Separator
+item.BlockChanger.name=Block Changer
+//item.Item.name=name
+
+#Container
+entity.Salamandre.name=Salamandre
+
+#CreativeTabs
+itemGroup.SACreativeTabsBlock=Sevenno's Addons Blocks
+itemGroup.SACreativeTabsItem=Sevenno's Addons Items
+itemGroup.SACreativeTabsArmor=Sevenno's Addons Combat
+itemGroup.SACreativeTabsTool=Sevenno's Addons Tools

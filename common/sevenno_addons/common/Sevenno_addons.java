@@ -3,6 +3,8 @@ package sevenno_addons.common;
 import sevenno_addons.common.block.SABlockList;
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
 import sevenno_addons.common.event.BottleEvent;
+import sevenno_addons.common.event.BucketEvent;
+import sevenno_addons.common.event.SeparatorEvent;
 //import sevenno_addons.common.event.PlayerRenderEvent;
 import sevenno_addons.proxy.SACommonProxy;
 import sevenno_addons.common.gui.GuiHandler;
@@ -11,6 +13,8 @@ import sevenno_addons.common.recipe.SARecipe;
 import sevenno_addons.common.tileentity.SATEntityList;
 
 import java.util.logging.Logger;
+
+
 
 
 
@@ -66,6 +70,9 @@ public class Sevenno_addons
 		proxy.registerRenderEntity();
 		
 		MinecraftForge.EVENT_BUS.register(new BottleEvent());
+		MinecraftForge.EVENT_BUS.register(new BucketEvent());
+		MinecraftForge.EVENT_BUS.register(new SeparatorEvent());
+		MinecraftForge.EVENT_BUS.register(new BlockChanger());
 		// *1
 
 		SATEntityList.loadTileEntity();
