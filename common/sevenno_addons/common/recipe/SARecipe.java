@@ -14,17 +14,27 @@ public class SARecipe
 	{
 		//block
 		GameRegistry.addRecipe(new ItemStack(SABlockList.GreenMushroomBlock_P, 1), new Object[]{"UXU", "VYV", "WZW", 'U', Items.sugar, 'V', SAItemList.StrangeSubstance, 'W', Items.emerald, 'Y', Blocks.red_mushroom, 'X', Blocks.brown_mushroom, 'Z', Blocks.glowstone});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.InvertedRedstoneLamp, 2), new Object[]{"XXX", "XYX", "XXX", 'X', Items.glowstone_dust, 'Y', Blocks.redstone_torch});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.WoodenBox, 12), new Object[]{"XYX", "Y Y", "XYX", 'X', Items.paper, 'Y', Blocks.planks});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 2, 0), new Object[]{"X", "Y", 'X', Blocks.glowstone, 'Y', new ItemStack(Blocks.quartz_block, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 2, 1), new Object[]{"X", "Y", 'X', Blocks.glowstone, 'Y', new ItemStack(Blocks.quartz_block, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 2, 2), new Object[]{"X", "Y", 'X', Blocks.glowstone, 'Y', new ItemStack(Blocks.quartz_block, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 1, 0), new Object[]{"Y", 'Y', new ItemStack(SABlockList.LightQuartzBlock, 1, 2)});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 1, 1), new Object[]{"Y", 'Y', new ItemStack(SABlockList.LightQuartzBlock, 1, 0)});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.LightQuartzBlock, 1, 2), new Object[]{"Y", 'Y', new ItemStack(SABlockList.LightQuartzBlock, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.RefinedBedrockBlock, 1), new Object[]{"YYY", "YYY", "YYY", 'Y', SAItemList.BedrockIngot});
+		
 		
 		//items
-		GameRegistry.addRecipe(new ItemStack(SAItemList.CoalReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.coal});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.IronReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.iron_ingot});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.GoldReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.gold_ingot});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.DiamondReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.diamond});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.EmeraldReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.emerald});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.RedstoneReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.redstone});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.LapisReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', new ItemStack(Items.dye, 1, 4)});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.GlowstoneReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.glowstone_dust});
-		GameRegistry.addRecipe(new ItemStack(SAItemList.QuartzReed, 1), new Object[]{"XYX", " X ", "XZX", 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.quartz});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.CoalReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.coal});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.IronReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.iron_ingot});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.GoldReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.gold_ingot});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.DiamondReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.diamond});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.EmeraldReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.emerald});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.RedstoneReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.redstone});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.LapisReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', new ItemStack(Items.dye, 1, 4)});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.GlowstoneReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.glowstone_dust});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.QuartzReed, 1), new Object[]{"WYW", " X ", "XZX", 'W', SAItemList.StrangeSubstance, 'X', new ItemStack(Items.dye, 1, 15), 'Y', Items.reeds, 'Z', Items.quartz});
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.coal), new Object[]{ new ItemStack(SAItemList.CoalReed)});
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.iron_ingot), new Object[]{ new ItemStack(SAItemList.IronReed)});

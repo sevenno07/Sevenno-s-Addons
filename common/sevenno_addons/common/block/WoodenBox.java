@@ -5,6 +5,7 @@ import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -27,15 +28,19 @@ public class WoodenBox extends BlockContainer
 		return new TileEntityWoodenBoxGUI();
 	}
 	
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9)
-	{	
-		if(world.getBlockMetadata(x, y, z) == 0)
-		{
-			player.openGui(Sevenno_addons.instance, 0, world, x, y, z);
-			return true;
-		}
-		return false;
-	}
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
+    {
+		if(player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Item.getItemFromBlock(this ))
+        {
+                return false;
+        }
+        if(world.getBlockMetadata(x, y, z) == 0)
+        {
+            player.openGui(Sevenno_addons.instance, 0, world, x, y, z);
+            return true;
+        }
+        return false;
+    }
 
 	public void breakBlock(World world, int x, int y, int z, Block side, int metadata)
 	{
