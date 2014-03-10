@@ -51,18 +51,27 @@ item.ReinforcementGem.name=Reinforcement Gem
 item.PurpleEnzymesBucket.name=Purple Enzymes Bucket
 item.StrangeSubstance.name=Strange Substance
 
-item.BedrockSword.name=Bedrock Sword
 item.RDHelmet.name=Reinforced Diamond Helmet
 item.RDChestplate.name=Reinforced Diamond Chestplate
 item.RDLeggings.name=Reinforced Diamond Leggings
 item.RDBoots.name=Reinforced Diamond Boots
 
 item.Superpickaxe.name=Super Pickaxe
+
+item.BedrockSword.name=Bedrock Sword
 item.BedrockPickaxe.name=Bedrock Pickaxe
 item.BedrockAxe.name=Bedrock Axe
 item.BedrockShovel.name=Bedrock Shovel
+
+item.StrangeSword.name=Strange Sword
+item.StrangePickaxe.name=Strange Pickaxe
+item.StrangeAxe.name=Strange Axe
+item.StrangeShovel.name=Strange Shovel
+item.StrangeHoe.name=Strange Hoe
+
 item.Separator.name=Separator
 item.BlockChanger.name=Block Changer
+item.StrangeStick.name=Strange Stick
 //item.Item.name=name
 
 #Container

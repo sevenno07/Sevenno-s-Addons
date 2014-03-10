@@ -48,8 +48,14 @@ public class SARecipe
 		GameRegistry.addRecipe(new ItemStack(Blocks.log2, 5, 0), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log2, 1, 0)});
 		GameRegistry.addRecipe(new ItemStack(Blocks.log2, 5, 1), new Object[]{"X", "Y", 'X', SABlockList.StrangeTreeLog, 'Y', new ItemStack(Blocks.log2, 1, 1)});
 		
+		GameRegistry.addRecipe(new ItemStack(SABlockList.StrangePlankFence, 2), new Object[]{"XXX", "XXX", 'X', SAItemList.StrangeStick});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.StrangePlankWall, 6), new Object[]{"XXX", "XXX", 'X', SABlockList.StrangePlank});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.StrangePlankStairs, 6), new Object[]{"X  ", "XX ", "XXX", 'X', SABlockList.StrangePlank});
+		GameRegistry.addRecipe(new ItemStack(SABlockList.StrangePlankSlab, 6), new Object[]{"XXX", 'X', SABlockList.StrangePlank});
+		
 		GameRegistry.addShapelessRecipe(new ItemStack(SABlockList.StrangePlank, 4), new Object[]{SABlockList.StrangeTreeLog_N});
 		GameRegistry.addShapelessRecipe(new ItemStack(SABlockList.StrangePlank, 8), new Object[]{SABlockList.StrangeTreeLog});
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.stick, 2), new Object[]{SAItemList.StrangeStick});
 		
 		
 		//items
@@ -79,6 +85,12 @@ public class SARecipe
 		GameRegistry.addRecipe(new ItemStack(SAItemList.BedrockAxe), new Object[]{"BB ", "BO ", " D ", 'B', (SABlockList.RefinedBedrockBlock), 'O', Blocks.obsidian, 'D', Items.diamond});
 		GameRegistry.addRecipe(new ItemStack(SAItemList.BedrockShovel), new Object[]{" B ", " O ", " D ", 'B', (SABlockList.RefinedBedrockBlock), 'O', Blocks.obsidian, 'D', Items.diamond});
 		GameRegistry.addRecipe(new ItemStack(SAItemList.BedrockSword), new Object[]{" B ", " B ", " D ", 'B', (SABlockList.RefinedBedrockBlock), 'D', Items.diamond});
+		
+		GameRegistry.addRecipe(new ItemStack(SAItemList.StrangeSword), new Object[]{" X ", " X ", " Y ", 'X', SABlockList.StrangePlank, 'Y', SAItemList.StrangeStick});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.StrangePickaxe), new Object[]{"XXX", " Y ", " Y ", 'X', SABlockList.StrangePlank, 'Y', SAItemList.StrangeStick});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.StrangeAxe), new Object[]{"XX ", "XY ", " Y ", 'X', SABlockList.StrangePlank, 'Y', SAItemList.StrangeStick});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.StrangeShovel), new Object[]{" X ", " Y ", " Y ", 'X', SABlockList.StrangePlank, 'Y', SAItemList.StrangeStick});
+		GameRegistry.addRecipe(new ItemStack(SAItemList.StrangeHoe), new Object[]{"XX ", " Y ", " Y ", 'X', SABlockList.StrangePlank, 'Y', SAItemList.StrangeStick});
 		
 		GameRegistry.addRecipe(new ItemStack(SAItemList.RDHelmet), new Object[]{"GGG", "GHG", 'G', (SAItemList.ReinforcementGem), 'H', Items.diamond_helmet});
 		GameRegistry.addRecipe(new ItemStack(SAItemList.RDChestplate), new Object[]{"GHG", "GGG", "GGG", 'G', (SAItemList.ReinforcementGem), 'H', Items.diamond_chestplate});

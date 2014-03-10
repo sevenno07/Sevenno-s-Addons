@@ -85,8 +85,8 @@ public class SABlockList
 		
 		//blocks
 		InvertedRedstoneLamp = new InvertedRedstoneLamp().setStepSound(Block.soundTypeGlass).setHardness(0.3F).setBlockName("InvertedRedstoneLamp");
-		WoodenBox = new WoodenBox().setStepSound(Block.soundTypeWood).setHardness(0.5F).setBlockName("WoodenBox").setBlockTextureName("sevenno_addons:woodenBox");
-		LightQuartzBlock = new LightQuartzBlock().setStepSound(Block.soundTypeStone).setLightLevel(1.0F).setHardness(0.5F).setBlockName("LightQuartzBlock").setBlockTextureName("sevenno_addons:lightquartzblock");
+		WoodenBox = new WoodenBox().setStepSound(Block.soundTypeWood).setHardness(0.3F).setBlockName("WoodenBox").setBlockTextureName("sevenno_addons:woodenBox");
+		LightQuartzBlock = new LightQuartzBlock().setStepSound(Block.soundTypeStone).setLightLevel(1.0F).setHardness(1.0F).setBlockName("LightQuartzBlock").setBlockTextureName("sevenno_addons:lightquartzblock");
 		RefinedBedrockBlock = new RefinedBedrockBlock().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("RefinedBedrockBlock").setBlockTextureName("sevenno_addons:refinedbedrockblock");
 		SPReedBooster = new SPReedBooster().setStepSound(Block.soundTypeGlass).setHardness(2.0F).setBlockName("SPReedBooster");
 		
@@ -113,12 +113,12 @@ public class SABlockList
 		PurpleMushroomBlock_P = new PurpleMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock_P");
 		PurpleMushroomBlock1 = new PurpleMushroomBlock1().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock1");
 		PurpleMushroomBlock2 = new PurpleMushroomBlock2().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("PurpleMushroomBlock2");
-		PurpleMushroomBlock_N1 = new PurpleMushroomBlock_N1().setStepSound(Block.soundTypeWood).setHardness(2.0F).setBlockName("PurpleMushroomBlock_N1");
-		PurpleMushroomBlock_N2 = new PurpleMushroomBlock_N2().setStepSound(Block.soundTypeWood).setHardness(2.0F).setBlockName("PurpleMushroomBlock_N2");
+		PurpleMushroomBlock_N1 = new PurpleMushroomBlock_N1().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setBlockName("PurpleMushroomBlock_N1");
+		PurpleMushroomBlock_N2 = new PurpleMushroomBlock_N2().setStepSound(Block.soundTypeWood).setHardness(3.0F).setResistance(5.0F).setBlockName("PurpleMushroomBlock_N2");
 		
 		GreenMushroomChest = new GreenMushroomChest().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("GreenMushroomChest");
 		
-		StrangeTree = new StrangeTree().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setBlockName("StrangeTree");
+		StrangeTree = new StrangeTree().setStepSound(Block.soundTypeGrass).setBlockName("StrangeTree");
 		StrangeTreeLog = new StrangeTreeLog().setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangeTreeLog");
 		StrangeTreeLog_N = new StrangeTreeLog_N().setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangeTreeLog_N");
 		StrangeTreeLeaves = new StrangeTreeLeaves().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setHardness(0.2F).setBlockName("StrangeTreeLeaves");
@@ -129,8 +129,8 @@ public class SABlockList
 		StrangePlankStairs2 = new ModStairs2(StrangePlank2, 0).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankStairs2");
 		StrangePlankFence = new ModFence("sevenno_addons:strangePlank", Material.wood).setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("StrangePlankFence");
 		StrangePlankFence2 = new ModFence("sevenno_addons:strangePlank2", Material.wood).setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("StrangePlankFence2");
-		StrangePlankWall = new StrangePlankWall(StrangePlank).setBlockName("StrangePlankWall").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
-		StrangePlankWall2 = new StrangePlankWall2(StrangePlank2).setBlockName("StrangePlankWall2").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		StrangePlankWall = new StrangePlankWall(StrangePlank).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankWall").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		StrangePlankWall2 = new StrangePlankWall2(StrangePlank2).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankWall2").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 		StrangePlankSlab = new StrangeSlab(false).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankSlab").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 		StrangePlankDoubleSlab = new StrangeSlab(true).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankDoubleSlab");
 		StrangePlankSlab2 = new StrangeSlab2(false).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankSlab2").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
@@ -204,7 +204,6 @@ public class SABlockList
 			{
 				blockQuicksilver = (Block)Class.forName("nether_plus.common.block.NPBlockList").getField("blockQuicksilver").get(null);
 				blockSoulplasm = (Block)Class.forName("nether_plus.common.block.NPBlockList").getField("blockSoulplasm").get(null);
-//				blockSoulplasm = GameRegistry.findBlock("nether_plus", "blockSoulplasm");
 			}
 			catch(Exception ex)
 			{

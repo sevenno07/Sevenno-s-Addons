@@ -45,7 +45,7 @@ public class BottleEvent
 		{
 			if (event.entityPlayer.worldObj.getBlock(event.x, event.y, event.z) == SABlockList.StrangePlank2 && event.entityPlayer.getCurrentEquippedItem() != null && event.entityPlayer.getCurrentEquippedItem().getItem() == Items.glass_bottle)
 			{
-				event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, SABlockList.StrangePlank2);
+				event.entityPlayer.worldObj.setBlock(event.x, event.y, event.z, SABlockList.StrangePlank);
 				
 				--event.entityPlayer.inventory.getCurrentItem().stackSize;
 				if (!event.entityPlayer.inventory.addItemStackToInventory(new ItemStack(SAItemList.StrangeSubstance)))

@@ -34,16 +34,24 @@ public class SAItemList
 	
 	public static Item PurpleEnzymesBucket;
 	public static Item StrangeSubstance;
+	public static Item StrangeStick;
 	
 	//outils
 	public static ToolMaterial SuperM = EnumHelper.addToolMaterial("SuperM", 3, 10000, 14.0F, 4, 30);
 	public static ToolMaterial BedrockTools = EnumHelper.addToolMaterial("BedrockTools", 3, 1999999999, 16.0F, 7, 30);
+	public static ToolMaterial StrangeTools = EnumHelper.addToolMaterial("StrangeTool", 1, 262, 4.0F, 1, 5);
 	
 	public static Item SuperPickaxe;
 	public static Item BedrockPickaxe;
 	public static Item BedrockAxe;
 	public static Item BedrockShovel;
 	public static Item BedrockSword;
+	
+	public static Item StrangeSword;
+	public static Item StrangePickaxe;
+	public static Item StrangeAxe;
+	public static Item StrangeShovel;
+	public static Item StrangeHoe;
 	
 	//armors
 	public static ArmorMaterial RDArmor = EnumHelper.addArmorMaterial("ReinforcedDiamondArmor", 25, new int[]{4, 7, 6, 4}, 21);
@@ -80,13 +88,22 @@ public class SAItemList
 			
 			PurpleEnzymesBucket = new PurpleEnzymesBucket(SABlockList.blockPurpleDigestiveEnzymes).setUnlocalizedName("PurpleEnzymesBucket").setContainerItem(Items.bucket);
 			StrangeSubstance = new StrangeSubstance().setUnlocalizedName("StrangeSubstance");
+			StrangeStick = new StrangeStick().setUnlocalizedName("StrangeStick");
+			
 			
 			//tools
 			SuperPickaxe = new SuperPickaxe(SuperM).setUnlocalizedName("Superpickaxe");
+			
 			BedrockPickaxe = new BedrockPickaxe(BedrockTools).setUnlocalizedName("BedrockPickaxe");
 			BedrockAxe = new BedrockAxe(BedrockTools).setUnlocalizedName("BedrockAxe");
 			BedrockShovel = new BedrockShovel(BedrockTools).setUnlocalizedName("BedrockShovel");
 			BedrockSword = new BedrockSword(BedrockTools).setUnlocalizedName("BedrockSword");
+			
+			StrangeSword = new StrangeSword(StrangeTools).setUnlocalizedName("StrangeSword");
+			StrangePickaxe = new StrangePickaxe(StrangeTools).setUnlocalizedName("StrangePickaxe");
+			StrangeAxe = new StrangeAxe(StrangeTools).setUnlocalizedName("StrangeAxe");
+			StrangeShovel = new StrangeShovel(StrangeTools).setUnlocalizedName("StrangeShovel");
+			StrangeHoe = new StrangeHoe(StrangeTools).setUnlocalizedName("StrangeHoe");
 			
 			Separator = new Separator().setUnlocalizedName("Separator");
 			BlockChanger = new BlockChanger().setUnlocalizedName("BlockChanger");
@@ -118,13 +135,21 @@ public class SAItemList
 			
 			GameRegistry.registerItem(PurpleEnzymesBucket, "Purple_Enzymes_Bucket");
 			GameRegistry.registerItem(StrangeSubstance, "Strange_Substance");
+			GameRegistry.registerItem(StrangeStick, "StrangeStick");
 			
 			//tools
 			GameRegistry.registerItem(SuperPickaxe, "Strong_Pickaxe");
+			
 			GameRegistry.registerItem(BedrockPickaxe, "Bedrock_Pickaxe");
 			GameRegistry.registerItem(BedrockAxe, "Bedrock_Axe");
 			GameRegistry.registerItem(BedrockShovel, "Bedrock_Shovel");
 			GameRegistry.registerItem(BedrockSword, "Bedrock_Sword");
+			
+			GameRegistry.registerItem(StrangeSword, "Strange_Sword");
+			GameRegistry.registerItem(StrangePickaxe, "Strange_Pickaxe");
+			GameRegistry.registerItem(StrangeAxe, "Strange_Axe");
+			GameRegistry.registerItem(StrangeShovel, "Strange_Shovel");
+			GameRegistry.registerItem(StrangeHoe, "Strange_Hoe");
 			
 			GameRegistry.registerItem(Separator, "Separator");
 			GameRegistry.registerItem(BlockChanger, "Block_Changer");
