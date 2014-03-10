@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class SABlockList
@@ -67,6 +68,10 @@ public class SABlockList
 	public static Block StrangePlankSlab2;
 	public static Block StrangePlankDoubleSlab2;
 	
+	//!\addon/!\
+	public static Block blockQuicksilver = null;
+	public static Block blockSoulplasm = null;
+	//!\addon/!\
 	
 	public static void loadBlock()
 	{
@@ -192,5 +197,20 @@ public class SABlockList
 			Sevenno_addons.SAlog.severe("Erreur lors de l'initialisation des Blocks!");
 		}
 		Sevenno_addons.SAlog.info("Initialisation des Blocks terminés!");
+	
+		if(Loader.isModLoaded("nether_plus"))
+		{
+			try
+			{
+				blockQuicksilver = (Block)Class.forName("nether_plus.common.block.NPBlockList").getField("blockQuicksilver").get(null);
+				blockSoulplasm = (Block)Class.forName("nether_plus.common.block.NPBlockList").getField("blockSoulplasm").get(null);
+//				blockSoulplasm = GameRegistry.findBlock("nether_plus", "blockSoulplasm");
+			}
+			catch(Exception ex)
+			{
+				Sevenno_addons.SAlog.severe("Erreur lors de l'initialisation de Nether_Plus");
+			}
+			Sevenno_addons.SAlog.info("Initialisation de Nether_Plus terminé");
+		}
 	}
 }
