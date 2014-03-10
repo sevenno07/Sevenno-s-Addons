@@ -1,4 +1,4 @@
-package sevenno_addons.common;
+package sevenno_addons.common.event;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;

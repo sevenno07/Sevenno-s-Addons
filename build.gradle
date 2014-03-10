@@ -17,12 +17,12 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0.0"
-group= "genetical_modifier" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "Genetical_modifier
+version = "1.0.1"
+group= "sevenno_addons" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "Sevenno-s-Addons"
 
 minecraft {
-    version = "1.7.2-10.12.0.1033"
+    version = "1.7.2-10.12.0.1034"
     assetDir = "eclipse/assets"
 }
 

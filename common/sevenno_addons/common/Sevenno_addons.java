@@ -2,6 +2,7 @@ package sevenno_addons.common;
 
 import sevenno_addons.common.block.SABlockList;
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
+import sevenno_addons.common.event.BlockChanger;
 import sevenno_addons.common.event.BottleEvent;
 import sevenno_addons.common.event.BucketEvent;
 import sevenno_addons.common.event.SeparatorEvent;
@@ -11,8 +12,12 @@ import sevenno_addons.common.gui.GuiHandler;
 import sevenno_addons.common.item.SAItemList;
 import sevenno_addons.common.recipe.SARecipe;
 import sevenno_addons.common.tileentity.SATEntityList;
+import sevenno_addons.common.world.WorldGeneration;
 
 import java.util.logging.Logger;
+
+
+
 
 
 
@@ -30,6 +35,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "sevenno_addons", name = "Sevenno's addons", version = "1.0.1")
 
@@ -77,6 +83,7 @@ public class Sevenno_addons
 
 		SATEntityList.loadTileEntity();
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, GuiHandler);
+		GameRegistry.registerWorldGenerator(new WorldGeneration(), 0);
 	}
 
 	@EventHandler
