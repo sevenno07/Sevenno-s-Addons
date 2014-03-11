@@ -68,6 +68,11 @@ public class SABlockList
 	public static Block StrangePlankSlab2;
 	public static Block StrangePlankDoubleSlab2;
 	
+	public static Block WaterTrack;
+	public static Block WaterTrackPowered;
+	public static Block FlyingTrack;
+	public static Block FlyingTrackPowered;
+	
 	//!\addon/!\
 	public static Block blockQuicksilver = null;
 	public static Block blockSoulplasm = null;
@@ -136,6 +141,11 @@ public class SABlockList
 		StrangePlankSlab2 = new StrangeSlab2(false).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankSlab2").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 		StrangePlankDoubleSlab2 = new StrangeSlab2(true).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankDoubleSlab2");
 		
+		WaterTrack = new WaterTrack().setStepSound(Block.soundTypeMetal).setHardness(0.7F).setResistance(5.0F).setBlockName("WaterTrack").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock).setBlockTextureName("sevenno_addons:waterTrack");
+		WaterTrackPowered = new WaterTrackPowered().setStepSound(Block.soundTypeMetal).setHardness(0.7F).setResistance(5.0F).setBlockName("WaterTrackPowered").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock).setBlockTextureName("sevenno_addons:waterTrackPowered");
+		FlyingTrack = new FlyingTrack().setStepSound(Block.soundTypeMetal).setHardness(0.7F).setResistance(5.0F).setBlockName("FlyingTrack").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock).setBlockTextureName("sevenno_addons:flyingTrack");
+		FlyingTrackPowered = new FlyingTrackPowered().setStepSound(Block.soundTypeMetal).setHardness(0.7F).setResistance(5.0F).setBlockName("FlyingTrackPowered").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock).setBlockTextureName("sevenno_addons:flyingTrackPowered");
+		
 		
 		try
 		{
@@ -190,6 +200,11 @@ public class SABlockList
 			GameRegistry.registerBlock(StrangePlankDoubleSlab, ItemStrangeSlab.class, "StrangePlankDoubleSlab", "sevenno_addons");
 			GameRegistry.registerBlock(StrangePlankSlab2, ItemStrangeSlab2.class, "StrangePlankSlab2", "sevenno_addons");
 			GameRegistry.registerBlock(StrangePlankDoubleSlab2, ItemStrangeSlab2.class, "StrangePlankDoubleSlab2", "sevenno_addons");
+			
+			GameRegistry.registerBlock(WaterTrack, ItemBlockWaterTrack.class, "Water_Track");
+			GameRegistry.registerBlock(WaterTrackPowered, ItemBlockWaterTrackPowered.class, "Water_Track_Powered");
+			GameRegistry.registerBlock(FlyingTrack, "Flying_Track");
+			GameRegistry.registerBlock(FlyingTrackPowered, "Flying_Track_Powered");
 			
 		}
 		catch(Exception ex)

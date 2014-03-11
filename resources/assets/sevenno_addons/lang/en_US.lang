@@ -33,6 +33,9 @@ tile.StrangePlankSlab.StrangePlank.name=Strange Slab
 tile.StrangePlankDoubleSlab.StrangePlank.name=Strange Slab
 tile.StrangePlankSlab2.StrangePlank2.name=Strange Slab
 tile.StrangePlankDoubleSlab2.StrangePlank2.name=Strange Slab
+tile.FlyingTrack.name=Flying Track
+tile.FlyingTrackPowered.name=Flying Track Powered
+
 //tile.block.name=name
 
 #Items
