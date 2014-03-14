@@ -1,5 +1,6 @@
-package sevenno_addons.common.block;
+package sevenno_addons.common.block.itemblock;
 
+import sevenno_addons.common.block.SABlockList;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
@@ -9,18 +10,18 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemStrangeSlab2 extends ItemBlock
+public class ItemStrangeSlab extends ItemBlock
 {
 	private final boolean isFullBlock;
 	private final Block theHalfSlab;
 	private final Block doubleSlab;
 
-	public ItemStrangeSlab2(Block block)
+	public ItemStrangeSlab(Block block)
 	{
 		super(block);
-		this.theHalfSlab = SABlockList.StrangePlankSlab2;
-		this.doubleSlab = SABlockList.StrangePlankDoubleSlab2;
-		if(block.equals(SABlockList.StrangePlankDoubleSlab2))
+		this.theHalfSlab = SABlockList.StrangePlankSlab;
+		this.doubleSlab = SABlockList.StrangePlankDoubleSlab;
+		if(block.equals(SABlockList.StrangePlankDoubleSlab))
 		{
 			this.isFullBlock = true;
 		}
@@ -46,7 +47,7 @@ public class ItemStrangeSlab2 extends ItemBlock
 
 	public String getUnlocalizedName(ItemStack stack)
 	{
-		return ((StrangeSlab2)theHalfSlab).func_150002_b(stack.getItemDamage());
+		return ((sevenno_addons.common.block.StrangeSlab)theHalfSlab).func_150002_b(stack.getItemDamage());
 	}
 
 	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int side, float par8, float par9, float par10)

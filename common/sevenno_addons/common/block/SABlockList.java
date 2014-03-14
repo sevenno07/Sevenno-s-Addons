@@ -1,10 +1,15 @@
 package sevenno_addons.common.block;
 
 import sevenno_addons.common.Sevenno_addons;
+import sevenno_addons.common.block.itemblock.ItemBlockWaterTrack;
+import sevenno_addons.common.block.itemblock.ItemBlockWaterTrackPowered;
 import sevenno_addons.common.block.itemblock.ItemInvertedRedstoneLamp;
 import sevenno_addons.common.block.itemblock.ItemLightQuartzBlock;
+import sevenno_addons.common.block.itemblock.ItemStrangeSlab;
+import sevenno_addons.common.block.itemblock.ItemStrangeSlab2;
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -72,6 +77,14 @@ public class SABlockList
 	public static Block WaterTrackPowered;
 	public static Block FlyingTrack;
 	public static Block FlyingTrackPowered;
+	
+	public static Block PushButton_off;
+	public static Block PushButton_on;
+	
+	public static Block Connector_midle2;
+	public static Block Connector_off;
+	public static Block Connector_midle;
+	public static Block Connector_on;
 	
 	//!\addon/!\
 	public static Block blockQuicksilver = null;
@@ -146,6 +159,14 @@ public class SABlockList
 		FlyingTrack = new FlyingTrack().setStepSound(Block.soundTypeMetal).setHardness(0.7F).setResistance(5.0F).setBlockName("FlyingTrack").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock).setBlockTextureName("sevenno_addons:flyingTrack");
 		FlyingTrackPowered = new FlyingTrackPowered().setStepSound(Block.soundTypeMetal).setHardness(0.7F).setResistance(5.0F).setBlockName("FlyingTrackPowered").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock).setBlockTextureName("sevenno_addons:flyingTrackPowered");
 		
+		PushButton_off = new PushButton_off().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_off").setBlockTextureName("sevenno_addons:pushbutton_off");
+		PushButton_on = new PushButton_on().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_on").setBlockTextureName("sevenno_addons:pushbutton_on");
+		
+		Connector_midle2 = new Connector_midle2().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector_midle2").setBlockTextureName("sevenno_addons:connector_on");
+		Connector_off = new Connector_off().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector").setBlockTextureName("sevenno_addons:connector_off");
+		Connector_midle = new Connector_midle().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector_midle").setBlockTextureName("sevenno_addons:connector_off");
+		Connector_on = new Connector_on().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector_on").setBlockTextureName("sevenno_addons:connector_on");
+		
 		
 		try
 		{
@@ -205,6 +226,14 @@ public class SABlockList
 			GameRegistry.registerBlock(WaterTrackPowered, ItemBlockWaterTrackPowered.class, "Water_Track_Powered");
 			GameRegistry.registerBlock(FlyingTrack, "Flying_Track");
 			GameRegistry.registerBlock(FlyingTrackPowered, "Flying_Track_Powered");
+			
+			GameRegistry.registerBlock(PushButton_off, "Push_Button_off");
+			GameRegistry.registerBlock(PushButton_on, "Push_Button_on");
+			
+			GameRegistry.registerBlock(Connector_midle2, "Connector_midle2");
+			GameRegistry.registerBlock(Connector_off, "Connector_off");
+			GameRegistry.registerBlock(Connector_midle, "Connector_midle");
+			GameRegistry.registerBlock(Connector_on, "Connector_on");
 			
 		}
 		catch(Exception ex)

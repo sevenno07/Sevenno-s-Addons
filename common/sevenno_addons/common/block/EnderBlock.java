@@ -18,7 +18,7 @@ public class EnderBlock extends BlockBreakable
     protected EnderBlock(Material par2Material, boolean par3)
     {
 		super("glass", par2Material, par3);
-//		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 	}
 	
     public int getRenderBlockPass()

@@ -33,6 +33,8 @@ tile.StrangePlankSlab.StrangePlank.name=Strange Slab
 tile.StrangePlankDoubleSlab.StrangePlank.name=Strange Slab
 tile.StrangePlankSlab2.StrangePlank2.name=Strange Slab
 tile.StrangePlankDoubleSlab2.StrangePlank2.name=Strange Slab
+tile.WaterTrack.name=Water Proof Track
+tile.WaterTrackPowered.name=Powered Water Proof Track
 tile.FlyingTrack.name=Flying Track
 tile.FlyingTrackPowered.name=Flying Track Powered
 

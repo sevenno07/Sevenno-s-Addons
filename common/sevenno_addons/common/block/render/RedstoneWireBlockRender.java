@@ -119,7 +119,7 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f7, icon.getInterpolatedU(l1), icon.getInterpolatedV(k1));
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f7, icon.getInterpolatedU(j1), icon.getInterpolatedV(k1));
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f8, icon.getInterpolatedU(j1), icon.getInterpolatedV(i2));
-				tessellator.setColorOpaque_F(f, f, f);
+//				tessellator.setColorOpaque_F(f, f, f);
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f8, icon2.getInterpolatedU(l1), icon2.getInterpolatedV(i2));
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f7, icon2.getInterpolatedU(l1), icon2.getInterpolatedV(k1));
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f7, icon2.getInterpolatedU(j1), icon2.getInterpolatedV(k1));
@@ -130,7 +130,7 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f7, icon1.getMaxU(), icon1.getMinV());
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f7, icon1.getMinU(), icon1.getMinV());
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f8, icon1.getMinU(), icon1.getMaxV());
-				tessellator.setColorOpaque_F(f, f, f);
+//				tessellator.setColorOpaque_F(f, f, f);
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f8, icon3.getMaxU(), icon3.getMaxV());
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f7, icon3.getMaxU(), icon3.getMinV());
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f7, icon3.getMinU(), icon3.getMinV());
@@ -141,7 +141,7 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f7, icon1.getMinU(), icon1.getMaxV());
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f7, icon1.getMinU(), icon1.getMinV());
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f8, icon1.getMaxU(), icon1.getMinV());
-				tessellator.setColorOpaque_F(f, f, f);
+//				tessellator.setColorOpaque_F(f, f, f);
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f8, icon3.getMaxU(), icon3.getMaxV());
 				tessellator.addVertexWithUV(f6, j + 0.015625D, f7, icon3.getMinU(), icon3.getMaxV());
 				tessellator.addVertexWithUV(f5, j + 0.015625D, f7, icon3.getMinU(), icon3.getMinV());
@@ -151,12 +151,12 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 			{
 				if (world.getBlock(i - 1, j, k).isNormalCube() && world.getBlock(i - 1, j + 1, k) == SABlockList.RedstoneWire)
 				{
-					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
+//					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
 					tessellator.addVertexWithUV(i + 0.015625D, j + 1 + 0.021875F, k + 1, icon1.getMaxU(), icon1.getMinV());
 					tessellator.addVertexWithUV(i + 0.015625D, j + 0, k + 1, icon1.getMinU(), icon1.getMinV());
 					tessellator.addVertexWithUV(i + 0.015625D, j + 0, k + 0, icon1.getMinU(), icon1.getMaxV());
 					tessellator.addVertexWithUV(i + 0.015625D, j + 1 + 0.021875F, k + 0, icon1.getMaxU(), icon1.getMaxV());
-					tessellator.setColorOpaque_F(f, f, f);
+//					tessellator.setColorOpaque_F(f, f, f);
 					tessellator.addVertexWithUV(i + 0.015625D, j + 1 + 0.021875F, k + 1, icon3.getMaxU(), icon3.getMinV());
 					tessellator.addVertexWithUV(i + 0.015625D, j + 0, k + 1, icon3.getMinU(), icon3.getMinV());
 					tessellator.addVertexWithUV(i + 0.015625D, j + 0, k + 0, icon3.getMinU(), icon3.getMaxV());
@@ -164,12 +164,12 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 				}
 				if (world.getBlock(i + 1, j, k).isNormalCube() && world.getBlock(i + 1, j + 1, k) == SABlockList.RedstoneWire)
 				{
-					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
+//					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 0, k + 1, icon1.getMinU(), icon1.getMaxV());
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 1 + 0.021875F, k + 1, icon1.getMaxU(), icon1.getMaxV());
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 1 + 0.021875F, k + 0, icon1.getMaxU(), icon1.getMinV());
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 0, k + 0, icon1.getMinU(), icon1.getMinV());
-					tessellator.setColorOpaque_F(f, f, f);
+//					tessellator.setColorOpaque_F(f, f, f);
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 0, k + 1, icon3.getMinU(), icon3.getMaxV());
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 1 + 0.021875F, k + 1, icon3.getMaxU(), icon3.getMaxV());
 					tessellator.addVertexWithUV(i + 1 - 0.015625D, j + 1 + 0.021875F, k + 0, icon3.getMaxU(), icon3.getMinV());
@@ -177,12 +177,12 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 				}
 				if (world.getBlock(i, j, k - 1).isNormalCube() && world.getBlock(i, j + 1, k - 1) == SABlockList.RedstoneWire)
 				{
-					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
+//					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
 					tessellator.addVertexWithUV(i + 1, j + 0, k + 0.015625D, icon1.getMinU(), icon1.getMaxV());
 					tessellator.addVertexWithUV(i + 1, j + 1 + 0.021875F, k + 0.015625D, icon1.getMaxU(), icon1.getMaxV());
 					tessellator.addVertexWithUV(i + 0, j + 1 + 0.021875F, k + 0.015625D, icon1.getMaxU(), icon1.getMinV());
 					tessellator.addVertexWithUV(i + 0, j + 0, k + 0.015625D, icon1.getMinU(), icon1.getMinV());
-					tessellator.setColorOpaque_F(f, f, f);
+//					tessellator.setColorOpaque_F(f, f, f);
 					tessellator.addVertexWithUV(i + 1, j + 0, k + 0.015625D, icon3.getMinU(), icon3.getMaxV());
 					tessellator.addVertexWithUV(i + 1, j + 1 + 0.021875F, k + 0.015625D, icon3.getMaxU(), icon3.getMaxV());
 					tessellator.addVertexWithUV(i + 0, j + 1 + 0.021875F, k + 0.015625D, icon3.getMaxU(), icon3.getMinV());
@@ -190,12 +190,12 @@ public class RedstoneWireBlockRender implements ISimpleBlockRenderingHandler
 				}
 				if (world.getBlock(i, j, k + 1).isNormalCube() && world.getBlock(i, j + 1, k + 1) == SABlockList.RedstoneWire)
 				{
-					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
+//					tessellator.setColorOpaque_F(f * f2, f * f3, f * f4);
 					tessellator.addVertexWithUV(i + 1, j + 1 + 0.021875F, k + 1 - 0.015625D, icon1.getMaxU(), icon1.getMinV());
 					tessellator.addVertexWithUV(i + 1, j + 0, k + 1 - 0.015625D, icon1.getMinU(), icon1.getMinV());
 					tessellator.addVertexWithUV(i + 0, j + 0, k + 1 - 0.015625D, icon1.getMinU(), icon1.getMaxV());
 					tessellator.addVertexWithUV(i + 0, j + 1 + 0.021875F, k + 1 - 0.015625D, icon1.getMaxU(), icon1.getMaxV());
-					tessellator.setColorOpaque_F(f, f, f);
+//					tessellator.setColorOpaque_F(f, f, f);
 					tessellator.addVertexWithUV(i + 1, j + 1 + 0.021875F, k + 1 - 0.015625D, icon3.getMaxU(), icon3.getMinV());
 					tessellator.addVertexWithUV(i + 1, j + 0, k + 1 - 0.015625D, icon3.getMinU(), icon3.getMinV());
 					tessellator.addVertexWithUV(i + 0, j + 0, k + 1 - 0.015625D, icon3.getMinU(), icon3.getMaxV());

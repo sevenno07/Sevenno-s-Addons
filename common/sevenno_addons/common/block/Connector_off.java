@@ -1,5 +1,87 @@
 package sevenno_addons.common.block;
 
+/*import java.util.Random;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
+import sevenno_addons.proxy.SAClientProxy;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class Connector_off extends Block
+{	
+	public Block getblock1 = (SABlockList.PushButton_on);
+	public Block getblock2 = (SABlockList.Connector_midle2);
+	
+	public Connector_off() 
+	{
+		super(Material.rock);
+		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+        this.setBlockBounds(0.15F, 0.15F, 0.15F, 0.85F, 0.85F, 0.85F);
+//		this.setTickRandomly(true);
+	}
+	
+    public int getRenderType()
+    {
+    	return SAClientProxy.ConnectorBlockRenderID;
+    }
+    
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
+    {
+        return null;
+    }
+	
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block)
+	{
+		if(world.getBlock(x, y - 1, z) == getblock1 || world.getBlock(x, y + 1, z) == getblock1 || world.getBlock(x - 1, y, z) == getblock1 || world.getBlock(x + 1, y, z) == getblock1 || world.getBlock(x, y, z - 1) == getblock1 || world.getBlock(x, y, z + 1) == getblock1
+		|| world.getBlock(x, y - 1, z) == getblock2 || world.getBlock(x, y + 1, z) == getblock2 || world.getBlock(x - 1, y, z) == getblock2 || world.getBlock(x + 1, y, z) == getblock2 || world.getBlock(x, y, z - 1) == getblock2 || world.getBlock(x, y, z + 1) == getblock2)
+		{
+			world.setBlock(x, y, z, SABlockList.Connector_midle2);
+		}
+	}
+	
+    public void randomDisplayTick(World world, int x, int y, int z, Random random)
+    {
+		world.setBlock(x, y, z, SABlockList.Connector_off);
+		{
+			world.setBlock(x, y, z, SABlockList.Connector_midle);
+		}
+    }
+	
+    public boolean renderAsNormalBlock()
+    {
+    	return false;
+    }
+    
+    public boolean isOpaqueCube()
+    {
+    	return false;
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public boolean shouldSideBeRendered(IBlockAccess blockAccess, int x, int y, int z, int side)
+    {
+    	return true;
+    }
+    
+    public boolean canProvidePower()
+    {
+        return true;
+    }
+
+    public int isProvidingWeakPower(IBlockAccess blockAccess, int par1, int par2, int par3, int par4)
+    {
+        return 0;
+    }
+}
+
+//TODO if(worldObj.getBlock(x, y, z) == LeBlockADetecter)
+//TODO updateTick, randomDisplayTick
+*/
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -8,8 +90,6 @@ import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 
-import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
-import sevenno_addons.common.item.SAItemList;
 import sevenno_addons.proxy.SAClientProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,7 +103,7 @@ import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class RedstoneWire extends Block
+public class Connector_off extends Block
 {
     private boolean part_a = true;
     private Set part_b = new HashSet();
@@ -37,10 +117,9 @@ public class RedstoneWire extends Block
     private IIcon part_P;
 //    private static final String __OBFID = "CL_00000295";
 
-    public RedstoneWire()
+    public Connector_off()
     {
         super(Material.circuits);
-        this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
     }
 
@@ -61,7 +140,7 @@ public class RedstoneWire extends Block
 
     public int getRenderType()
     {
-    	return SAClientProxy.redstoneWireID;
+    	return SAClientProxy.ConnectorBlockRenderID;
     }
 
     @SideOnly(Side.CLIENT)
@@ -333,11 +412,6 @@ public class RedstoneWire extends Block
         }
     }
 
-    public Item getItemDropped(int x, Random y, int z)
-    {
-        return SAItemList.RedstoneWire;
-    }
-
     public int isProvidingStrongPower(IBlockAccess blockAccess, int par2, int par3, int par4, int par5)
     {
         return !this.part_a ? 0 : this.isProvidingWeakPower(blockAccess, par2, par3, par4, par5);
@@ -405,7 +479,7 @@ public class RedstoneWire extends Block
     {
         Block block = blockAccess.getBlock(par1, par2, par3);
 
-        if (block == SABlockList.RedstoneWire)
+        if (block == SABlockList.Connector_off)
         {
             return true;
         }
@@ -417,41 +491,6 @@ public class RedstoneWire extends Block
         {
             int i1 = blockAccess.getBlockMetadata(par1, par2, par3);
             return par4 == (i1 & 3) || par4 == Direction.rotateOpposite[i1 & 3];
-        }
-    }
-
-    @SideOnly(Side.CLIENT)
-    public void randomDisplayTick(World world, int x, int y, int z, Random random)
-    {
-        int l = world.getBlockMetadata(x, y, z);
-
-        if (l > 0)
-        {
-            double d0 = (double)x + 0.5D + ((double)random.nextFloat() - 0.5D) * 0.2D;
-            double d1 = (double)((float)y + 0.0625F);
-            double d2 = (double)z + 0.5D + ((double)random.nextFloat() - 0.5D) * 0.2D;
-            float f = (float)l / 15.0F;
-            float f1 = f * 0.6F + 0.4F;
-
-            if (l == 0)
-            {
-                f1 = 0.0F;
-            }
-
-            float f2 = f * f * 0.7F - 0.5F;
-            float f3 = f * f * 0.6F - 0.7F;
-
-            if (f2 < 0.0F)
-            {
-                f2 = 0.0F;
-            }
-
-            if (f3 < 0.0F)
-            {
-                f3 = 0.0F;
-            }
-
-            world.spawnParticle("reddust", d0, d1, d2, (double)f1, (double)f2, (double)f3);
         }
     }
 
@@ -473,12 +512,6 @@ public class RedstoneWire extends Block
     }
 
     @SideOnly(Side.CLIENT)
-    public Item getItem(World world, int x, int y, int z)
-    {
-        return SAItemList.RedstoneWire;
-    }
-
-    @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister)
     {
         this.part_M = iconRegister.registerIcon(this.getTextureName() + "_" + "cross");
@@ -488,9 +521,9 @@ public class RedstoneWire extends Block
         this.blockIcon = this.part_M;
     }
 
-    @SideOnly(Side.CLIENT)
-    public static IIcon RedstoneWireIcon(String string)
+/*    @SideOnly(Side.CLIENT)
+    public static IIcon ConnectorIcon(String string)
     {
-        return string.equals("cross") ? SABlockList.RedstoneWire.part_M : (string.equals("line") ? SABlockList.RedstoneWire.part_N : (string.equals("cross_overlay") ? SABlockList.RedstoneWire.part_O : (string.equals("line_overlay") ? SABlockList.RedstoneWire.part_P : null)));
-    }
+        return string.equals("cross") ? SABlockList.Connector.part_M : (string.equals("line") ? SABlockList.Connector.part_N : (string.equals("cross_overlay") ? SABlockList.Connector.part_O : (string.equals("line_overlay") ? SABlockList.Connector.part_P : null)));
+    }*/
 }

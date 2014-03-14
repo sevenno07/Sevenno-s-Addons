@@ -5,8 +5,11 @@ import java.util.Random;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import sevenno_addons.common.block.render.ConnectorBlockRender;
 import sevenno_addons.common.block.render.RedstoneWireBlockRender;
 import sevenno_addons.common.block.render.RenderEnderBlock;
+import sevenno_addons.common.block.render.RenderPushButton_off;
+import sevenno_addons.common.block.render.RenderPushButton_on;
 import sevenno_addons.common.entity.GoldParticleFX;
 import sevenno_addons.common.tileentity.TileEntityGreenMushroomChest;
 import sevenno_addons.common.tileentity.TileEntityGreenMushroomChestRenderer;
@@ -20,6 +23,9 @@ public class SAClientProxy extends SACommonProxy
 {
 	public static int redstoneWireID;
 	public static int RenderEnderBlockID;
+	public static int RenderPushButton_onID;
+	public static int RenderPushButton_offID;
+	public static int ConnectorBlockRenderID;
 	
 	public static int renderPass;
 	
@@ -33,6 +39,15 @@ public class SAClientProxy extends SACommonProxy
 		
 		RenderEnderBlockID = RenderingRegistry.getNextAvailableRenderId();
 		RenderingRegistry.registerBlockHandler(RenderEnderBlockID, new RenderEnderBlock());
+		
+		RenderPushButton_onID = RenderingRegistry.getNextAvailableRenderId();
+		RenderingRegistry.registerBlockHandler(RenderPushButton_onID, new RenderPushButton_on());
+		
+		RenderPushButton_offID = RenderingRegistry.getNextAvailableRenderId();
+		RenderingRegistry.registerBlockHandler(RenderPushButton_offID, new RenderPushButton_off());
+		
+		ConnectorBlockRenderID = RenderingRegistry.getNextAvailableRenderId();
+		RenderingRegistry.registerBlockHandler(ConnectorBlockRenderID, new ConnectorBlockRender());
 	}
 	
 	public void initSound()

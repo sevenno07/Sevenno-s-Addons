@@ -1,5 +1,6 @@
-package sevenno_addons.common.block;
+package sevenno_addons.common.block.itemblock;
 
+import sevenno_addons.common.block.SABlockList;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
