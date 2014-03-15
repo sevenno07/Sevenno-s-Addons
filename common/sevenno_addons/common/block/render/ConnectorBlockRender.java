@@ -1,4 +1,4 @@
-package sevenno_addons.common.block.render;
+/*package sevenno_addons.common.block.render;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
@@ -68,7 +68,7 @@ public class ConnectorBlockRender implements ISimpleBlockRenderingHandler
 		
 		*/
 		//if(canConnect(world, x, y + 1, z)
-		{//midle
+/*		{//midle
 			renderer.setRenderBounds(0.44F, 0.44F, 0.44F, 0.56F, 0.56F, 0.56F);
 			renderer.renderStandardBlock(block, x, y, z);
 		}

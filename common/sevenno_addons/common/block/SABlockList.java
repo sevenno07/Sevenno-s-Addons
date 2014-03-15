@@ -9,7 +9,6 @@ import sevenno_addons.common.block.itemblock.ItemStrangeSlab;
 import sevenno_addons.common.block.itemblock.ItemStrangeSlab2;
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -81,10 +80,10 @@ public class SABlockList
 	public static Block PushButton_off;
 	public static Block PushButton_on;
 	
-	public static Block Connector_midle2;
-	public static Block Connector_off;
-	public static Block Connector_midle;
-	public static Block Connector_on;
+	public static Block Eliumite_ore;
+	
+	public static Fluid eliumite_gas;
+	public static Block blockEliumite_gas;
 	
 	//!\addon/!\
 	public static Block blockQuicksilver = null;
@@ -100,6 +99,14 @@ public class SABlockList
 		blockPurpleDigestiveEnzymes = new PurpleDigestiveEnzymes(PurpleDigestiveEnzymes, Material.water).setBlockName("PurpleDigestiveEnzymesStill");
 		GameRegistry.registerBlock(blockPurpleDigestiveEnzymes, "PurpleDigestiveEnzymes");
 		PurpleDigestiveEnzymes.setBlock(blockPurpleDigestiveEnzymes);
+				
+		
+		eliumite_gas = new Fluid("eliumitegas").setDensity(-400).setViscosity(6000).setTemperature(74).setLuminosity(0).setUnlocalizedName("eliumitegas");
+		FluidRegistry.registerFluid(eliumite_gas);
+		
+		blockEliumite_gas = new EliumiteGas(eliumite_gas, Material.vine).setBlockName("eliumite_gasStill");
+		GameRegistry.registerBlock(blockEliumite_gas, "EliumiteGas");
+		eliumite_gas.setBlock(blockEliumite_gas);
 		
 		//blocks
 		InvertedRedstoneLamp = new InvertedRedstoneLamp().setStepSound(Block.soundTypeGlass).setHardness(0.3F).setBlockName("InvertedRedstoneLamp");
@@ -162,10 +169,7 @@ public class SABlockList
 		PushButton_off = new PushButton_off().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_off").setBlockTextureName("sevenno_addons:pushbutton_off");
 		PushButton_on = new PushButton_on().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_on").setBlockTextureName("sevenno_addons:pushbutton_on");
 		
-		Connector_midle2 = new Connector_midle2().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector_midle2").setBlockTextureName("sevenno_addons:connector_on");
-		Connector_off = new Connector_off().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector").setBlockTextureName("sevenno_addons:connector_off");
-		Connector_midle = new Connector_midle().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector_midle").setBlockTextureName("sevenno_addons:connector_off");
-		Connector_on = new Connector_on().setStepSound(Block.soundTypeStone).setHardness(0.2F).setBlockName("Connector_on").setBlockTextureName("sevenno_addons:connector_on");
+		Eliumite_ore = new Eliumite_ore().setStepSound(Block.soundTypeStone).setHardness(0.5F).setBlockName("Eliumite").setBlockTextureName("sevenno_addons:eliumite_ore");
 		
 		
 		try
@@ -230,10 +234,7 @@ public class SABlockList
 			GameRegistry.registerBlock(PushButton_off, "Push_Button_off");
 			GameRegistry.registerBlock(PushButton_on, "Push_Button_on");
 			
-			GameRegistry.registerBlock(Connector_midle2, "Connector_midle2");
-			GameRegistry.registerBlock(Connector_off, "Connector_off");
-			GameRegistry.registerBlock(Connector_midle, "Connector_midle");
-			GameRegistry.registerBlock(Connector_on, "Connector_on");
+			GameRegistry.registerBlock(Eliumite_ore, "Eliumite_ore");
 			
 		}
 		catch(Exception ex)

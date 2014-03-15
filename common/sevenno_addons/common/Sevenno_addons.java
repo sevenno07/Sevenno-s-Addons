@@ -18,6 +18,8 @@ import sevenno_addons.common.world.WorldGeneration;
 
 import java.util.logging.Logger;
 
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 //import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
