@@ -3,12 +3,12 @@ package sevenno_addons.common.block.itemblock;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import sevenno_addons.common.block.LightQuartzBlock;
+import sevenno_addons.common.block.DStoneBrick;
 
-public class ItemLightQuartzBlock extends ItemBlock
+public class ItemBlockDStoneBrick extends ItemBlock
 {
-
-	public ItemLightQuartzBlock(Block block)
+	
+	public ItemBlockDStoneBrick(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -20,10 +20,13 @@ public class ItemLightQuartzBlock extends ItemBlock
 	public String getUnlocalizedName(ItemStack stack)
 	{
 		int metadata = stack.getItemDamage();
-		if(metadata > LightQuartzBlock.type_a.length || metadata < 0)
+		if(metadata < DStoneBrick.type.length && metadata >= 0)
 		{
-			metadata = 0;
+			return super.getUnlocalizedName() + "." + DStoneBrick.type[metadata];
 		}
-		return super.getUnlocalizedName() + "." + LightQuartzBlock.type_a[metadata];
+		else
+		{
+			return getUnlocalizedName();
+		}
 	}
 }

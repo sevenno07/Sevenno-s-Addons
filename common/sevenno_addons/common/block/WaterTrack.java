@@ -1,12 +1,18 @@
 package sevenno_addons.common.block;
 
+import java.util.List;
+
+import sevenno_addons.common.item.SAItemList;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.BlockRail;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
@@ -78,4 +84,22 @@ public class WaterTrack extends BlockRail
             }
         }
     }
+    
+	public void addCollisionBoxesToList(World world, int x, int y, int z, AxisAlignedBB axis, List list, Entity entity)
+	{
+		if(entity instanceof EntityLivingBase)
+		{
+			EntityLivingBase player = (EntityLivingBase)entity;
+			ItemStack boots = player.getEquipmentInSlot(1);
+			if(boots != null && boots.getItem() == SAItemList.mineroller)
+			{
+				AxisAlignedBB axisalignedbb1 = AxisAlignedBB.getAABBPool().getAABB((double)x - 0.05F, (double)y - 0.1F, (double)z - 0.05F, (double)x + 1.05F, (double)y + 0.0F, (double)z + 1.05F);
+     
+				if(axisalignedbb1 != null && axis.intersectsWith(axisalignedbb1))
+				{
+					list.add(axisalignedbb1);
+				}
+			}
+		}
+	}
 }

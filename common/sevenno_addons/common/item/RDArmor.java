@@ -31,7 +31,9 @@ public class RDArmor extends ItemArmor
 	public boolean getIsRepairable(ItemStack stack, ItemStack repairItem)
 	{
 		if(stack.getItem().equals(this) && repairItem.getItem() == SAItemList.ReinforcementGem)
+		{
 			return true;
+		}
 		return false;
 	}
 	

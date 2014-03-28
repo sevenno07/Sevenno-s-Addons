@@ -14,6 +14,6 @@ public class SACreativeTabsArmor extends CreativeTabs
 	@Override
 	public Item getTabIconItem()
 	{
-		return SAItemList.RDHelmet;
+		return SAItemList.BedrockSword;
 	}
 }

@@ -15,9 +15,13 @@ public class BedrockSword extends ItemSword
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsArmor);
 	}
 	
-	public boolean getIsRepairable(ItemStack stack, ItemStack outputstack)
+	public boolean getIsRepairable(ItemStack stack, ItemStack repairItem)
 	{
-		return true;
+		if(stack.getItem().equals(this) && repairItem.getItem() == SAItemList.BedrockIngot)
+		{
+			return true;
+		}
+		return false;
 	}
 	
   	@SideOnly(Side.CLIENT)

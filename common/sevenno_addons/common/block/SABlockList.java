@@ -1,6 +1,7 @@
 package sevenno_addons.common.block;
 
 import sevenno_addons.common.Sevenno_addons;
+import sevenno_addons.common.block.itemblock.ItemBlockDStoneBrick;
 import sevenno_addons.common.block.itemblock.ItemBlockWaterTrack;
 import sevenno_addons.common.block.itemblock.ItemBlockWaterTrackPowered;
 import sevenno_addons.common.block.itemblock.ItemInvertedRedstoneLamp;
@@ -85,6 +86,16 @@ public class SABlockList
 	public static Fluid eliumite_gas;
 	public static Block blockEliumite_gas;
 	
+	//Dimension
+	public static Block DDirt;
+	public static Block DGrass;
+	public static Block DStone;	
+	public static Block DCobblestone;
+	public static Block DGoldenSand;
+	public static Block DGoldenGlass;
+	public static Block DGoldenGlassPane;	
+	public static Block DStoneBrick;
+	
 	//!\addon/!\
 	public static Block blockQuicksilver = null;
 	public static Block blockSoulplasm = null;
@@ -109,11 +120,11 @@ public class SABlockList
 		eliumite_gas.setBlock(blockEliumite_gas);
 		
 		//blocks
-		InvertedRedstoneLamp = new InvertedRedstoneLamp().setStepSound(Block.soundTypeGlass).setHardness(0.3F).setBlockName("InvertedRedstoneLamp");
-		WoodenBox = new WoodenBox().setStepSound(Block.soundTypeWood).setHardness(0.3F).setBlockName("WoodenBox").setBlockTextureName("sevenno_addons:woodenBox");
-		LightQuartzBlock = new LightQuartzBlock().setStepSound(Block.soundTypeStone).setLightLevel(1.0F).setHardness(1.0F).setBlockName("LightQuartzBlock").setBlockTextureName("sevenno_addons:lightquartzblock");
-		RefinedBedrockBlock = new RefinedBedrockBlock().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("RefinedBedrockBlock").setBlockTextureName("sevenno_addons:refinedbedrockblock");
-		SPReedBooster = new SPReedBooster().setStepSound(Block.soundTypeGlass).setHardness(2.0F).setBlockName("SPReedBooster");
+		InvertedRedstoneLamp = new InvertedRedstoneLamp().setStepSound(Block.soundTypeGlass).setResistance(5.0F).setHardness(0.3F).setBlockName("InvertedRedstoneLamp");
+		WoodenBox = new WoodenBox().setStepSound(Block.soundTypeWood).setHardness(0.3F).setResistance(5.0F).setBlockName("WoodenBox").setBlockTextureName("sevenno_addons:woodenBox");
+		LightQuartzBlock = new LightQuartzBlock().setStepSound(Block.soundTypeStone).setResistance(5.0F).setLightLevel(1.0F).setHardness(1.0F).setBlockName("LightQuartzBlock").setBlockTextureName("sevenno_addons:lightquartzblock");
+		RefinedBedrockBlock = new RefinedBedrockBlock().setStepSound(Block.soundTypeStone).setResistance(50.0F).setHardness(5.0F).setBlockName("RefinedBedrockBlock").setBlockTextureName("sevenno_addons:refinedbedrockblock");
+		SPReedBooster = new SPReedBooster().setStepSound(Block.soundTypeGlass).setResistance(5.0F).setHardness(2.0F).setBlockName("SPReedBooster");
 		
 		CoalReedBlock = new CoalReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:coalReedBlock");
 		IronReedBlock = new IronReedBlock().setStepSound(Block.soundTypeGrass).setBlockName("SPReedBooster").setBlockTextureName("sevenno_addons:ironReedBlock");
@@ -127,7 +138,7 @@ public class SABlockList
 		
 		RedstoneWire = (sevenno_addons.common.block.RedstoneWire) new RedstoneWire().setBlockName("RedstoneWire").setBlockTextureName("sevenno_addons:redstoneWire");
 		
-		EnderBlock = new EnderBlock(Material.ice, false).setStepSound(Block.soundTypeGlass).setHardness(2.0F).setBlockName("EnderBlock");
+		EnderBlock = new EnderBlock(Material.ice, false).setStepSound(Block.soundTypeGlass).setResistance(5.0F).setHardness(2.0F).setBlockName("EnderBlock");
 		
 		GreenMushroomBlock_P = new GreenMushroomBlock_P().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setLightLevel(0.7F).setBlockName("GreenMushroomBlock_P");
 		GreenMushroomBlock = new GreenMushroomBlock().setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setLightLevel(0.7F).setBlockName("GreenMushroomBlock");
@@ -169,7 +180,20 @@ public class SABlockList
 		PushButton_off = new PushButton_off().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_off").setBlockTextureName("sevenno_addons:pushbutton_off");
 		PushButton_on = new PushButton_on().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_on").setBlockTextureName("sevenno_addons:pushbutton_on");
 		
-		Eliumite_ore = new Eliumite_ore().setStepSound(Block.soundTypeStone).setHardness(0.5F).setBlockName("Eliumite").setBlockTextureName("sevenno_addons:eliumite_ore");
+		Eliumite_ore = new Eliumite_ore().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(0.5F).setBlockName("Eliumite");
+		
+		//Dimension
+		DDirt = new DDirt().setStepSound(Block.soundTypeGravel).setResistance(5.0F).setHardness(0.5F).setBlockName("DDirt").setBlockTextureName("sevenno_addons:ddirt");
+		DGrass = new DGrass().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setHardness(0.4F).setBlockName("DGrass").setBlockTextureName("sevenno_addons:dgrass");
+		DStone = new DStone().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(1.9F).setBlockName("DStone").setBlockTextureName("sevenno_addons:dstone");
+		DCobblestone = new DCobblestone().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DCobblestone").setBlockTextureName("sevenno_addons:dcobblestone");
+		DGoldenSand = new DGoldenSand(Material.sand).setStepSound(Block.soundTypeSand).setResistance(5.0F).setHardness(0.5F).setBlockName("DGoldenSand").setBlockTextureName("sevenno_addons:dsand");
+		DGoldenGlass = new DGoldenGlass(Material.glass, false).setStepSound(Block.soundTypeGlass).setHardness(0.3F).setBlockName("DGoldenGlass");
+		DGoldenGlassPane = new DGoldenGlassPane ("sevenno_addons:dgoldenglass", "sevenno_addons:dgoldenglass_top", Material.glass, false).setStepSound(Block.soundTypeGlass).setHardness(0.5F).setResistance(5.0F).setBlockName("DGoldenGlassPane").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);		
+		DStoneBrick = new DStoneBrick().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrick")/*.setBlockTextureName("sevenno_addons:dstonebrick")*/;
+		DStoneBrick = new DStoneBrick().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickLines")/*.setBlockTextureName("sevenno_addons:dstonebrick")*/;
+		
+		
 		
 		
 		try
@@ -235,6 +259,18 @@ public class SABlockList
 			GameRegistry.registerBlock(PushButton_on, "Push_Button_on");
 			
 			GameRegistry.registerBlock(Eliumite_ore, "Eliumite_ore");
+			
+			//Dimension
+			GameRegistry.registerBlock(DDirt, "Dragon_Dirt");
+			GameRegistry.registerBlock(DGrass, "Dragon_Grass");
+			GameRegistry.registerBlock(DStone, "Dragon_Stone");			
+			GameRegistry.registerBlock(DCobblestone, "Dragon_Cobblestone");
+			GameRegistry.registerBlock(DGoldenSand, "Dragon_Golden_Sand");
+			GameRegistry.registerBlock(DGoldenGlass, "Dragon_Golden_Glass");
+			GameRegistry.registerBlock(DGoldenGlassPane, "Dragon_Golden_Glass_Pane");			
+//			GameRegistry.registerBlock(DStoneBrickLines, "Dragon_Stonebrick_Lines");
+			GameRegistry.registerBlock(DStoneBrick, ItemBlockDStoneBrick.class, "Dragon_Stonebrick");
+			
 			
 		}
 		catch(Exception ex)

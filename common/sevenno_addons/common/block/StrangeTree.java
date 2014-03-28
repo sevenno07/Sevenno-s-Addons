@@ -29,6 +29,11 @@ public class StrangeTree extends BlockSapling
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
 	}
 	
+    protected boolean canPlaceBlockOn(Block Par1)
+    {
+        return Par1 == SABlockList.DDirt || Par1 == SABlockList.DGrass;
+    }
+	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister iconregister)
 	{

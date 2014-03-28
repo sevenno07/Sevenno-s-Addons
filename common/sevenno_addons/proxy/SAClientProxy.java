@@ -11,6 +11,7 @@ import sevenno_addons.common.block.render.RenderEnderBlock;
 import sevenno_addons.common.block.render.RenderPushButton_off;
 import sevenno_addons.common.block.render.RenderPushButton_on;
 import sevenno_addons.common.entity.GoldParticleFX;
+import sevenno_addons.common.entity.GoldenParticleFX;
 import sevenno_addons.common.tileentity.TileEntityGreenMushroomChest;
 import sevenno_addons.common.tileentity.TileEntityGreenMushroomChestRenderer;
 import cpw.mods.fml.client.FMLClientHandler;
@@ -69,6 +70,13 @@ public class SAClientProxy extends SACommonProxy
 		for (int count = 0; count < particleAmount; count++)
 		{
 			EntityFX particles = new GoldParticleFX(world, x + rand.nextFloat(), y + (count > particleAmount / 2 ? 0.3F : 0.5F), z + rand.nextFloat(), 0.0D, 0.9D, 0.1D);
+
+			FMLClientHandler.instance().getClient().renderEngine.bindTexture(textures);
+		}
+		
+		for (int count = 0; count < particleAmount; count++)
+		{
+			EntityFX particles = new GoldenParticleFX(world, x + rand.nextFloat(), y + (count > particleAmount / 2 ? 0.3F : 0.5F), z + rand.nextFloat(), 0.0D, 0.9D, 0.1D);
 
 			FMLClientHandler.instance().getClient().renderEngine.bindTexture(textures);
 		}

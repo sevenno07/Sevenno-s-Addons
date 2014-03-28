@@ -54,7 +54,8 @@ public class SAItemList
 	public static Item StrangeHoe;
 	
 	//armors
-	public static ArmorMaterial RDArmor = EnumHelper.addArmorMaterial("ReinforcedDiamondArmor", 25, new int[]{4, 7, 6, 4}, 21);
+	public static ArmorMaterial RDArmor = EnumHelper.addArmorMaterial("ReinforcedDiamondArmor", 64, new int[]{4, 7, 6, 4}, 50);
+	public static ArmorMaterial MRoller = EnumHelper.addArmorMaterial("MRoller", 64, new int[]{2, 0, 0, 0}, 20);
 	
 	public static Item RDHelmet;
 	public static Item RDChestplate;
@@ -63,6 +64,9 @@ public class SAItemList
 	
 	public static Item Separator;
 	public static Item BlockChanger;
+	
+	public static Item mineroller2;
+	public static Item mineroller;
 	
 
 	public static void loadItem()
@@ -114,6 +118,9 @@ public class SAItemList
 			RDLeggings = new RDArmor(RDArmor, 0, 2).setUnlocalizedName("RDLeggings").setTextureName("sevenno_addons:ReinforcedDiamondLeggings");
 			RDBoots = new RDArmor(RDArmor, 0, 3).setUnlocalizedName("RDBoots").setTextureName("sevenno_addons:ReinforcedDiamondBoots");
 			
+			mineroller2 = new mineroller(MRoller, 0, 2).setUnlocalizedName("MRoller2");
+			mineroller = new mineroller(MRoller, 0, 3).setUnlocalizedName("MRoller").setTextureName("sevenno_addons:mineroller");
+			
 			
 			//register
 			//items
@@ -159,6 +166,8 @@ public class SAItemList
 			GameRegistry.registerItem(RDChestplate, "RD_Chestplate");
 			GameRegistry.registerItem(RDLeggings, "RD_Leggings");
 			GameRegistry.registerItem(RDBoots, "RD_Boots");
+			
+			GameRegistry.registerItem(mineroller, "mine_roller");
 			
 			FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("purpleEnzymes", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(PurpleEnzymesBucket), FluidContainerRegistry.EMPTY_BUCKET);
 			

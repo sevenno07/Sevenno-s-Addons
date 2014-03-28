@@ -15,9 +15,13 @@ public class BedrockPickaxe extends ItemPickaxe
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsTool);
 	}
 	
-	public boolean getIsRepairable(ItemStack stack, ItemStack outputstack)
+	public boolean getIsRepairable(ItemStack stack, ItemStack repairItem)
 	{
-		return true;
+		if(stack.getItem().equals(this) && repairItem.getItem() == SAItemList.BedrockIngot)
+		{
+			return true;
+		}
+		return false;
 	}
 	
   	@SideOnly(Side.CLIENT)
