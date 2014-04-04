@@ -23,8 +23,7 @@ public class Eliumite_ore extends BlockBreakable
 {
     public Eliumite_ore()
     {
-        super("sevenno_addons:eliumite_ore", Material.rock, false);
-        this.slipperiness = 0.98F;
+        super("sevenno_addons:DEliumite_ore", Material.rock, false);
         this.setTickRandomly(true);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);

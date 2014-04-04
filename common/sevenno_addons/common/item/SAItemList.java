@@ -36,6 +36,10 @@ public class SAItemList
 	public static Item StrangeSubstance;
 	public static Item StrangeStick;
 	
+	public static Item Cherry;
+	
+	public static Item CondensedStrangeSubstance;
+	
 	//outils
 	public static ToolMaterial SuperM = EnumHelper.addToolMaterial("SuperM", 3, 10000, 14.0F, 4, 30);
 	public static ToolMaterial BedrockTools = EnumHelper.addToolMaterial("BedrockTools", 3, 1999999999, 16.0F, 7, 30);
@@ -53,6 +57,12 @@ public class SAItemList
 	public static Item StrangeShovel;
 	public static Item StrangeHoe;
 	
+	public static Item Separator;
+	public static Item BlockChanger;
+	public static Item Burin;
+	
+	public static Item test;
+	
 	//armors
 	public static ArmorMaterial RDArmor = EnumHelper.addArmorMaterial("ReinforcedDiamondArmor", 64, new int[]{4, 7, 6, 4}, 50);
 	public static ArmorMaterial MRoller = EnumHelper.addArmorMaterial("MRoller", 64, new int[]{2, 0, 0, 0}, 20);
@@ -61,9 +71,6 @@ public class SAItemList
 	public static Item RDChestplate;
 	public static Item RDLeggings;
 	public static Item RDBoots;
-	
-	public static Item Separator;
-	public static Item BlockChanger;
 	
 	public static Item mineroller2;
 	public static Item mineroller;
@@ -94,6 +101,10 @@ public class SAItemList
 			StrangeSubstance = new StrangeSubstance().setUnlocalizedName("StrangeSubstance");
 			StrangeStick = new StrangeStick().setUnlocalizedName("StrangeStick");
 			
+			Cherry = new Cherry(6, 20.0F, false).setUnlocalizedName("Cherry").setTextureName("sevenno_addons:Cherry");
+			
+			CondensedStrangeSubstance = new CondensedStrangeSubstance().setUnlocalizedName("CondensedStrangeSubstance");
+			
 			
 			//tools
 			SuperPickaxe = new SuperPickaxe(SuperM).setUnlocalizedName("Superpickaxe");
@@ -111,6 +122,8 @@ public class SAItemList
 			
 			Separator = new Separator().setUnlocalizedName("Separator");
 			BlockChanger = new BlockChanger().setUnlocalizedName("BlockChanger");
+			Burin = new Burin().setUnlocalizedName("Burin");
+			test = new test().setUnlocalizedName("test");
 			
 			//armors
 			RDHelmet = new RDArmor(RDArmor, 0, 0).setUnlocalizedName("RDHelmet").setTextureName("sevenno_addons:ReinforcedDiamondHelmet");
@@ -144,6 +157,10 @@ public class SAItemList
 			GameRegistry.registerItem(StrangeSubstance, "Strange_Substance");
 			GameRegistry.registerItem(StrangeStick, "StrangeStick");
 			
+			GameRegistry.registerItem(Cherry, "Cherry");
+			
+			GameRegistry.registerItem(CondensedStrangeSubstance, "Condensed_Strange_Substance");
+			
 			//tools
 			GameRegistry.registerItem(SuperPickaxe, "Strong_Pickaxe");
 			
@@ -160,6 +177,8 @@ public class SAItemList
 			
 			GameRegistry.registerItem(Separator, "Separator");
 			GameRegistry.registerItem(BlockChanger, "Block_Changer");
+			GameRegistry.registerItem(Burin, "Burin");
+			GameRegistry.registerItem(test, "test");
 			
 			//armors
 			GameRegistry.registerItem(RDHelmet, "RD_Helmet");

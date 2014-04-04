@@ -1,14 +1,23 @@
 package sevenno_addons.common.block;
 
 import sevenno_addons.common.Sevenno_addons;
+import sevenno_addons.common.block.itemblock.ItemBlockDGoldenSandstone;
 import sevenno_addons.common.block.itemblock.ItemBlockDStoneBrick;
+import sevenno_addons.common.block.itemblock.ItemBlockMineralHarves1_SingleLoot;
+import sevenno_addons.common.block.itemblock.ItemBlockMineralHarves2_SingleLoot;
+import sevenno_addons.common.block.itemblock.ItemBlockMineralHarves3_SingleLoot;
+import sevenno_addons.common.block.itemblock.ItemBlockModLogs;
+import sevenno_addons.common.block.itemblock.ItemBlockModplanks;
 import sevenno_addons.common.block.itemblock.ItemBlockWaterTrack;
 import sevenno_addons.common.block.itemblock.ItemBlockWaterTrackPowered;
 import sevenno_addons.common.block.itemblock.ItemInvertedRedstoneLamp;
 import sevenno_addons.common.block.itemblock.ItemLightQuartzBlock;
+import sevenno_addons.common.block.itemblock.ItemModStoneSlab;
+import sevenno_addons.common.block.itemblock.ItemModWoodSlab;
 import sevenno_addons.common.block.itemblock.ItemStrangeSlab;
 import sevenno_addons.common.block.itemblock.ItemStrangeSlab2;
 import sevenno_addons.common.creativetabs.SevennoAddonsCreativeTabs;
+import sevenno_addons.common.dimension.SAD_PortalBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fluids.Fluid;
@@ -81,11 +90,6 @@ public class SABlockList
 	public static Block PushButton_off;
 	public static Block PushButton_on;
 	
-	public static Block Eliumite_ore;
-	
-	public static Fluid eliumite_gas;
-	public static Block blockEliumite_gas;
-	
 	//Dimension
 	public static Block DDirt;
 	public static Block DGrass;
@@ -95,6 +99,45 @@ public class SABlockList
 	public static Block DGoldenGlass;
 	public static Block DGoldenGlassPane;	
 	public static Block DStoneBrick;
+	public static Block DStonebrickPillar;
+	public static Block DGoldenSandstone;
+	public static Block ModLogs;
+	public static Block DCherryleaves;
+	public static Block DEbonyleaves;
+	public static Block DCherryTree;
+	public static Block DEbonyTree;
+	public static Block Modplanks;
+	
+	public static Block DCobblestoneStairs;
+	public static Block DStoneBrickStairs1;
+	public static Block DStoneBrickStairs2;
+	public static Block DStoneBrickStairs3;
+	public static Block DStoneBrickStairs4;
+	public static Block DGoldenSandstoneStairs1;
+	public static Block DGoldenSandstoneStairs2;
+	public static Block DCherryPlanksStairs;
+	public static Block DEbonyPlanksStairs;
+	
+	public static Block DCobblestoneWall;
+	public static Block DStoneBrickWall1;
+	public static Block DGoldenSandstoneWall1;
+	public static Block DCherryPlanksFence;
+	public static Block DEbonyPlanksFence;
+	
+	public static Block ModStoneSlab;
+	public static Block ModStoneDoubleSlab;
+	public static Block ModWoodSlab;
+	public static Block ModWoodDoubleSlab;
+	
+	public static Block MineralHarves1_SingleLoot;
+	public static Block MineralHarves2_SingleLoot;
+	public static Block Eliumite_ore;
+	public static Block MineralHarves3_SingleLoot;
+	
+	public static Block DragonPortal;
+	
+	public static Fluid eliumite_gas;
+	public static Block blockEliumite_gas;
 	
 	//!\addon/!\
 	public static Block blockQuicksilver = null;
@@ -162,7 +205,7 @@ public class SABlockList
 		StrangePlank = new StrangePlank().setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlank").setBlockTextureName("sevenno_addons:strangePlank");
 		StrangePlank2 = new StrangePlank2().setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlank2").setBlockTextureName("sevenno_addons:strangePlank2");
 		StrangePlankStairs = new ModStairs(StrangePlank, 0).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankStairs");
-		StrangePlankStairs2 = new ModStairs2(StrangePlank2, 0).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankStairs2");
+		StrangePlankStairs2 = new ModStairs(StrangePlank2, 0).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankStairs2");
 		StrangePlankFence = new ModFence("sevenno_addons:strangePlank", Material.wood).setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("StrangePlankFence");
 		StrangePlankFence2 = new ModFence("sevenno_addons:strangePlank2", Material.wood).setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("StrangePlankFence2");
 		StrangePlankWall = new StrangePlankWall(StrangePlank).setResistance(5.0F).setHardness(3.0F).setBlockName("StrangePlankWall").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
@@ -180,20 +223,52 @@ public class SABlockList
 		PushButton_off = new PushButton_off().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_off").setBlockTextureName("sevenno_addons:pushbutton_off");
 		PushButton_on = new PushButton_on().setStepSound(Block.soundTypeStone).setHardness(5.0F).setBlockName("PushButton_on").setBlockTextureName("sevenno_addons:pushbutton_on");
 		
-		Eliumite_ore = new Eliumite_ore().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(0.5F).setBlockName("Eliumite");
 		
 		//Dimension
-		DDirt = new DDirt().setStepSound(Block.soundTypeGravel).setResistance(5.0F).setHardness(0.5F).setBlockName("DDirt").setBlockTextureName("sevenno_addons:ddirt");
-		DGrass = new DGrass().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setHardness(0.4F).setBlockName("DGrass").setBlockTextureName("sevenno_addons:dgrass");
+		DDirt = new DDirt().setStepSound(Block.soundTypeGravel).setResistance(5.0F).setHardness(0.4F).setBlockName("DDirt").setBlockTextureName("sevenno_addons:ddirt");
+		DGrass = new DGrass().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setHardness(0.6F).setBlockName("DGrass").setBlockTextureName("sevenno_addons:dgrass");
 		DStone = new DStone().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(1.9F).setBlockName("DStone").setBlockTextureName("sevenno_addons:dstone");
 		DCobblestone = new DCobblestone().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DCobblestone").setBlockTextureName("sevenno_addons:dcobblestone");
 		DGoldenSand = new DGoldenSand(Material.sand).setStepSound(Block.soundTypeSand).setResistance(5.0F).setHardness(0.5F).setBlockName("DGoldenSand").setBlockTextureName("sevenno_addons:dsand");
 		DGoldenGlass = new DGoldenGlass(Material.glass, false).setStepSound(Block.soundTypeGlass).setHardness(0.3F).setBlockName("DGoldenGlass");
 		DGoldenGlassPane = new DGoldenGlassPane ("sevenno_addons:dgoldenglass", "sevenno_addons:dgoldenglass_top", Material.glass, false).setStepSound(Block.soundTypeGlass).setHardness(0.5F).setResistance(5.0F).setBlockName("DGoldenGlassPane").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);		
-		DStoneBrick = new DStoneBrick().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrick")/*.setBlockTextureName("sevenno_addons:dstonebrick")*/;
-		DStoneBrick = new DStoneBrick().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickLines")/*.setBlockTextureName("sevenno_addons:dstonebrick")*/;
+		DStoneBrick = new DStoneBrick().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrick");
+		DStonebrickPillar = new DStonebrickPillar().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickPillar");
+		DGoldenSandstone = new DGoldenSandstone().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(1.5F).setBlockName("DSandStone");
+		ModLogs = new ModLogs().setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(3.0F).setBlockName("ModLogs").setBlockTextureName("sevenno_addons:log").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		DCherryleaves = new DCherryleaves().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setHardness(0.2F).setBlockName("DCherryleaves");
+		DEbonyleaves = new DEbonyleaves().setStepSound(Block.soundTypeGrass).setResistance(5.0F).setHardness(0.2F).setBlockName("DEbonyleaves");
+		DCherryTree = new DCherryTree().setStepSound(Block.soundTypeGrass).setBlockName("DCherryTree");
+		DEbonyTree = new DEbonyTree().setStepSound(Block.soundTypeGrass).setBlockName("DEbonyTree");
+		Modplanks = new Modplanks().setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(2.8F).setBlockName("Modplanks").setBlockTextureName("sevenno_addons:planks");
 		
+		DCobblestoneStairs = new ModStairs(DCobblestone, 0).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DCobblestoneStairs");
+		DStoneBrickStairs1 = new ModStairs(DStoneBrick, 0).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickStairs1");
+		DStoneBrickStairs2 = new ModStairs(DStoneBrick, 3).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickStairs2");
+		DStoneBrickStairs3 = new ModStairs(DStoneBrick, 4).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickStairs3");
+		DStoneBrickStairs4 = new ModStairs(DStoneBrick, 5).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickStairs4");
+		DGoldenSandstoneStairs1 = new ModStairs(DGoldenSandstone, 0).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(1.5F).setBlockName("DGoldenSandstoneStairs1");
+		DGoldenSandstoneStairs2 = new ModStairs(DGoldenSandstone, 1).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(1.5F).setBlockName("DGoldenSandstoneStairs2");
+		DCherryPlanksStairs = new ModStairs(Modplanks, 0).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(2.8F).setBlockName("DCherryPlanksStairs");
+		DEbonyPlanksStairs = new ModStairs(Modplanks, 1).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(2.8F).setBlockName("DEbonyPlanksStairs");
 		
+		DCobblestoneWall = new DCobblestoneWall(DCobblestone).setResistance(5.0F).setHardness(2.0F).setBlockName("DCobblestoneWall").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		DStoneBrickWall1 = new DStoneBrickWall1(DStoneBrick).setResistance(5.0F).setHardness(2.0F).setBlockName("DStoneBrickWall1").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		DGoldenSandstoneWall1 = new DGoldenSandstoneWall1(DGoldenSandstone).setResistance(5.0F).setHardness(2.0F).setBlockName("DGoldenSandstoneWall1").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		DCherryPlanksFence = new ModFence("sevenno_addons:planks_cherry", Material.wood).setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("DCherryPlanksFence");
+		DEbonyPlanksFence = new ModFence("sevenno_addons:planks_ebony", Material.wood).setStepSound(Block.soundTypeWood).setHardness(2.0F).setResistance(5.0F).setBlockName("DEbonyPlanksFence");
+		
+		ModStoneSlab = new ModStoneSlab(false).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("ModStoneSlab").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		ModStoneDoubleSlab = new ModStoneSlab(true).setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(2.0F).setBlockName("ModStoneDoubleSlab");
+		ModWoodSlab = new ModWoodSlab(false).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(2.8F).setBlockName("ModWoodSlab").setCreativeTab(SevennoAddonsCreativeTabs.SACreativeTabsBlock);
+		ModWoodDoubleSlab = new ModWoodSlab(true).setStepSound(Block.soundTypeWood).setResistance(5.0F).setHardness(2.8F).setBlockName("ModWoodDoubleSlab");
+		
+		MineralHarves1_SingleLoot = new MineralHarves1_SingleLoot().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(3.0F).setBlockName("MineralHarves1_SingleLoot");
+		MineralHarves2_SingleLoot = new MineralHarves2_SingleLoot().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(3.0F).setBlockName("MineralHarves2_SingleLoot");
+		Eliumite_ore = new Eliumite_ore().setStepSound(Block.soundTypeStone).setResistance(5.0F).setResistance(5.0F).setHardness(3.0F).setBlockName("Eliumite");
+		MineralHarves3_SingleLoot = new MineralHarves3_SingleLoot().setStepSound(Block.soundTypeStone).setResistance(5.0F).setHardness(3.0F).setBlockName("MineralHarves3_SingleLoot");
+		
+		DragonPortal = new SAD_PortalBlock().setStepSound(Block.soundTypeGlass).setResistance(50.0F).setHardness(5.0F).setBlockName("DragonPortal")/*.setBlockTextureName("sevenno_addons:refinedbedrockblock")*/;
 		
 		
 		try
@@ -258,18 +333,51 @@ public class SABlockList
 			GameRegistry.registerBlock(PushButton_off, "Push_Button_off");
 			GameRegistry.registerBlock(PushButton_on, "Push_Button_on");
 			
-			GameRegistry.registerBlock(Eliumite_ore, "Eliumite_ore");
-			
 			//Dimension
 			GameRegistry.registerBlock(DDirt, "Dragon_Dirt");
 			GameRegistry.registerBlock(DGrass, "Dragon_Grass");
-			GameRegistry.registerBlock(DStone, "Dragon_Stone");			
+			GameRegistry.registerBlock(DStone, "Dragon_Stone");
 			GameRegistry.registerBlock(DCobblestone, "Dragon_Cobblestone");
 			GameRegistry.registerBlock(DGoldenSand, "Dragon_Golden_Sand");
 			GameRegistry.registerBlock(DGoldenGlass, "Dragon_Golden_Glass");
-			GameRegistry.registerBlock(DGoldenGlassPane, "Dragon_Golden_Glass_Pane");			
-//			GameRegistry.registerBlock(DStoneBrickLines, "Dragon_Stonebrick_Lines");
+			GameRegistry.registerBlock(DGoldenGlassPane, "Dragon_Golden_Glass_Pane");
 			GameRegistry.registerBlock(DStoneBrick, ItemBlockDStoneBrick.class, "Dragon_Stonebrick");
+			GameRegistry.registerBlock(DStonebrickPillar, "Dragon_Stonebrick_Pillar");
+			GameRegistry.registerBlock(DGoldenSandstone, ItemBlockDGoldenSandstone.class, "Dragon_Golden_Sandstone");
+			GameRegistry.registerBlock(ModLogs, ItemBlockModLogs.class, "Mod_Logs");
+			GameRegistry.registerBlock(DCherryleaves, "Dragon_Cherry_Leaves");
+			GameRegistry.registerBlock(DEbonyleaves, "Dragon_Ebony_Leaves");
+			GameRegistry.registerBlock(DCherryTree, "Dragon_Cherry_Tree");
+			GameRegistry.registerBlock(DEbonyTree, "Dragon_Ebony_Tree");
+			GameRegistry.registerBlock(Modplanks, ItemBlockModplanks.class, "Mod_Planks");
+			
+			GameRegistry.registerBlock(DCobblestoneStairs, "DCobblestone_Stairs");
+			GameRegistry.registerBlock(DStoneBrickStairs1, "DStone_Brick_Stairs1");
+			GameRegistry.registerBlock(DStoneBrickStairs2, "DStone_Brick_Stairs2");
+			GameRegistry.registerBlock(DStoneBrickStairs3, "DStone_Brick_Stairs3");
+			GameRegistry.registerBlock(DStoneBrickStairs4, "DStone_Brick_Stairs4");
+			GameRegistry.registerBlock(DGoldenSandstoneStairs1, "DGolden_Sandstone_Stairs1");
+			GameRegistry.registerBlock(DGoldenSandstoneStairs2, "DGolden_Sandstone_Stairs2");
+			GameRegistry.registerBlock(DCherryPlanksStairs, "DCherry_Planks_Stairs");
+			GameRegistry.registerBlock(DEbonyPlanksStairs, "DEbony_Planks_Stairs");
+			
+			GameRegistry.registerBlock(DCobblestoneWall, "DCobblestone_Wall");
+			GameRegistry.registerBlock(DStoneBrickWall1, "DStoneBrick_Wall1");
+			GameRegistry.registerBlock(DGoldenSandstoneWall1, "DGolden_Sandstone_Wall1");
+			GameRegistry.registerBlock(DCherryPlanksFence, "DCherry_Planks_Fence");
+			GameRegistry.registerBlock(DEbonyPlanksFence, "DEbony_Planks_Fence");
+			
+			GameRegistry.registerBlock(ModStoneSlab, ItemModStoneSlab.class, "ModStoneSlab", "sevenno_addons");
+			GameRegistry.registerBlock(ModStoneDoubleSlab, ItemModStoneSlab.class, "ModStoneDoubleSlab", "sevenno_addons");
+			GameRegistry.registerBlock(ModWoodSlab, ItemModWoodSlab.class, "ModWoodSlab", "sevenno_addons");
+			GameRegistry.registerBlock(ModWoodDoubleSlab, ItemModWoodSlab.class, "ModWoodDoubleSlab", "sevenno_addons");
+			
+			GameRegistry.registerBlock(MineralHarves1_SingleLoot, ItemBlockMineralHarves1_SingleLoot.class, "Mineral_Harves1_Single_Loot");
+			GameRegistry.registerBlock(MineralHarves2_SingleLoot, ItemBlockMineralHarves2_SingleLoot.class, "Mineral_Harves2_Single_Loot");
+			GameRegistry.registerBlock(Eliumite_ore, "Eliumite_ore");
+			GameRegistry.registerBlock(MineralHarves3_SingleLoot, ItemBlockMineralHarves3_SingleLoot.class, "Mineral_Harves3_Single_Loot");
+			
+			GameRegistry.registerBlock(DragonPortal, "Dragon_Portal");
 			
 			
 		}

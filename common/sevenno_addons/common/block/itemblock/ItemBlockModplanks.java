@@ -1,14 +1,14 @@
 package sevenno_addons.common.block.itemblock;
 
-import sevenno_addons.common.block.DStoneBrick;
+import sevenno_addons.common.block.Modplanks;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemBlockDStoneBrick extends ItemBlock
+public class ItemBlockModplanks extends ItemBlock
 {
 	
-	public ItemBlockDStoneBrick(Block block)
+	public ItemBlockModplanks(Block block)
 	{
 		super(block);
 		this.setHasSubtypes(true);
@@ -20,9 +20,9 @@ public class ItemBlockDStoneBrick extends ItemBlock
 	public String getUnlocalizedName(ItemStack stack)
 	{
 		int metadata = stack.getItemDamage();
-		if(metadata < DStoneBrick.type.length && metadata >= 0)
+		if(metadata < Modplanks.woodes_types.length && metadata >= 0)
 		{
-			return super.getUnlocalizedName() + "." + DStoneBrick.type[metadata];
+			return super.getUnlocalizedName() + "." + Modplanks.woodes_types[metadata];
 		}
 		else
 		{

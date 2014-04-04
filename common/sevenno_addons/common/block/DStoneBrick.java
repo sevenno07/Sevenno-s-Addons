@@ -200,13 +200,7 @@ public class DStoneBrick extends Block
 		}
 		return this.getIcon(side, blockaccess.getBlockMetadata(x, y, z));
 	}
-		
-/*		public IIcon getIcon(int side, int metadata)
-		{
-			int k = metadata & 12;
-			return k == 0 && (side == 1 || side == 0) ? Top : (k == 4 && (side == 5 || side == 4) ? Top : (k == 8 && (side == 2 || side == 3) ? Top : blockIcon));
-		}*/
-		
+
 	    public IIcon getIcon(int par1, int par2)
 	    {
 			if(par2 == 0)
@@ -280,39 +274,12 @@ public class DStoneBrick extends Block
 	    	list.add(new ItemStack(item, 1, 11));
 	    	list.add(new ItemStack(item, 1, 12));
 	    }
-	     
-/*		public Item getItemDropped(int par1, Random par2Random, int par3)
-	    {
-			return Item.getItemFromBlock(SABlockList.GreenMushroomBlock_N);
-	    }    
 
-	    public Item itemPicked(World par1World, int par2, int par3, int par4)
-	    {
-	        return Item.getItemFromBlock(SABlockList.GreenMushroomBlock_N);
-	    }*/
-	
 	    public int damageDropped(int metadata)
 	    {
 	    	return metadata;
 	    }
-	    
-/*	@SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-	{
-		this.blockIcon = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_SouthNorth");
-		this.blockIcon2 = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_EastWeast");
-		this.Top = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_top");
-		this.UpLeft = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_upLeft");
-		this.UpRight = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_upRight");
-		this.DownLeft = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_downLeft");
-		this.DownRight = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_downRight");
-		this.Cros = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_cros");
-		this.North = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_north");
-		this.East = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_east");
-		this.South = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_south");
-		this.West = iconRegister.registerIcon("sevenno_addons:DStoneBrickLines_west");
-	}*/
-	    
+  
 	public void registerBlockIcons(IIconRegister iconRegister)
 	{
 		IconArray = new IIcon[type.length];
